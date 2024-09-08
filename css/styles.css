@@ -282,7 +282,7 @@ h1, h2, h3 {
   }
   
   .enroll-btn:hover {
-    background-color: #0056b3;
+    background-color: #007BFF;
   }
   /* Testimonials Section */
 #testimonials {
@@ -321,4 +321,24 @@ h1, h2, h3 {
 .testimonial h4 {
     font-size: 1.2em;
     color: #007BFF;
+}
+/* Explore Courses Button */
+.explore-btn-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #007BFF;
 }
