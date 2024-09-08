@@ -342,3 +342,25 @@ h1, h2, h3 {
 .explore-btn:hover {
     background-color: #007BFF;
 }
+.typewriter {
+    font-size: 50px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden; /* Hides the text that hasn't been "typed" yet */
+    border-right: 3px solid; /* Creates the blinking cursor effect */
+    width: 0;
+    animation: typing 4s steps(35, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }  /* Typing out the full text */
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; } /* Blinking effect for the cursor */
+}
+
