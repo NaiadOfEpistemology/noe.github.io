@@ -1,26 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.querySelector('.carousel-nav .prev');
-    const nextBtn = document.querySelector('.carousel-nav .next');
-    const carouselImages = document.querySelector('.carousel-images');
-    let index = 0;
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-images img');
+const totalSlides = slides.length;
 
-    function updateCarousel() {
-        const width = document.querySelector('.carousel').offsetWidth;
-        carouselImages.style.transform = `translateX(-${index * width}px)`;
-    }
-
-    nextBtn.addEventListener('click', function() {
-        const totalImages = document.querySelectorAll('.carousel-images img').length;
-        index = (index + 1) % totalImages;
-        updateCarousel();
-    });
-
-    prevBtn.addEventListener('click', function() {
-        const totalImages = document.querySelectorAll('.carousel-images img').length;
-        index = (index - 1 + totalImages) % totalImages;
-        updateCarousel();
-    });
-
-    // Initialize carousel position
-    updateCarousel();
+document.querySelector('.next').addEventListener('click', () => {
+    moveToNextSlide();
 });
+
+document.querySelector('.prev').addEventListener('click', () => {
+    moveToPreviousSlide();
+});
+
+function moveToNextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides; // Loop to the first slide if we reach the last one
+    updateCarousel();
+}
+
+function moveToPreviousSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loop to the last slide if we go before the first one
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const newPosition = -currentIndex * 100; // Calculate the percentage to shift
+    document.querySelector('.carousel-images').style.transform = `translateX(${newPosition}%)`;
+}

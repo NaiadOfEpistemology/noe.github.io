@@ -21,7 +21,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+    /*background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;*/
     color: white;
     display: flex;
     justify-content: center;
@@ -223,37 +223,42 @@ h1, h2, h3 {
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 300%; /* Adjust this based on the number of images */
 }
 
 .carousel-images img {
     width: 100%;
-    height: auto; /* Adjust as needed */
+    height: auto;
 }
 
-.carousel-nav .prev,
-.carousel-nav .next {
+.carousel-nav .prev, .carousel-nav .next {
     position: absolute;
     top: 50%;
-    width: 50px;
-    height: 50px;
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    text-align: center;
-    line-height: 50px;
+    padding: 10px;
     cursor: pointer;
-    transform: translateY(-50%);
-    font-size: 30px;
-    border-radius: 50%;
 }
 
 .carousel-nav .prev {
-    left: 20px;
+    left: 10px;
 }
 
 .carousel-nav .next {
-    right: 20px;
+    right: 10px;
+}
+.carousel-images {
+    display: flex;
+    width: 300%; 
+    transition: transform 0.5s ease-in-out; /* Smooth scrolling transition */
 }
 
+
+.carousel-images img {
+    width: 100%; /* Ensure the images take full width */
+    height: auto;
+}
 
 .course-container {
     margin: 50px auto;
