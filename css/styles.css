@@ -284,4 +284,41 @@ h1, h2, h3 {
   .enroll-btn:hover {
     background-color: #0056b3;
   }
-  
+   /* Testimonials Section */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    font-size: 1.2em;
+    color: #007BFF;
+}
