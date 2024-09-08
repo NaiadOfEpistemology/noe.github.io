@@ -1,0 +1,282 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.cta-button {
+    background-color: #33c6e8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.feature {
+    width: 22%;
+}
+
+.feature h2 {
+    font-size: 24px;
+    color: #33c6e8;
+}
+
+.feature p {
+    font-size: 18px;
+}
+
+/* Courses Section */
+.courses {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.course {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.course img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.course-btn {
+    display: block;
+    margin-top: 10px;
+    background-color: #33c6e8;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+/* CSS in styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-section {
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section a {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-section a:hover {
+    background-color: #2980b9;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+}
+
+.section p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.featured-courses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.featured-courses div {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .featured-courses {
+        flex-direction: column;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section a {
+        padding: 8px 16px;
+    }
+}
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto; /* Adjust as needed */
+}
+
+.carousel-nav .prev,
+.carousel-nav .next {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+.carousel-nav .prev {
+    left: 20px;
+}
+
+.carousel-nav .next {
+    right: 20px;
+}
+
+
+.course-container {
+    margin: 50px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .course-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .enroll-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .enroll-btn:hover {
+    background-color: #0056b3;
+  }
+  
