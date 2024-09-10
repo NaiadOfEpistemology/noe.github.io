@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Course</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Data Science Course</h1>
-    </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <div class="course-container">
-            <div class="course-details">
-                
-                
-                <p>Discover the fundamentals of data science in this comprehensive course. Learn data analysis, statistical methods, and machine learning techniques to unlock the power of data.</p>
-                <h2>What you'll learn</h2>
-                <ul>
-                    <li>Data Analysis and Visualization</li>
-                    <li>Statistical Methods for Data Science</li>
-                    <li>Introduction to Machine Learning</li>
-                    <li>Data Cleaning and Preparation</li>
-                    <li>Using Python for Data Science</li>
-                </ul>
-                <p><strong>Duration:</strong> 12 weeks</p>
-                <p><strong>Level:</strong> Beginner to Intermediate</p>
-                <p><strong>Instructor:</strong> Dr. Jane Smith</p>
-                <p><strong>Price:</strong> $499</p>
-                <a href="#" class="enroll-btn">Enroll Now</a>
-            </div>
-        </div>
-    </main>
+  <header>
+    <h1>Data Science</h1>
+  </header>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2024 Learning Website</p>
-    </footer>
+  <section id="course-overview">
+    <h2>Course Overview</h2>
+    <p>Learn data analysis, visualization, and machine learning with Python. This course covers everything from basic statistics to advanced data models.</p>
+  </section>
+
+  <section id="importance">
+    <h2>Why is it Important?</h2>
+    <p>Data is the new oil, and companies are investing heavily in data science to make informed decisions. This course is essential for anyone looking to enter this rapidly growing field.</p>
+  </section>
+
+  <section id="what-you-learn">
+    <h2>What You'll Learn</h2>
+    <ul>
+      <li>Python Programming for Data Science</li>
+      <li>Data Analysis and Visualization</li>
+      <li>Machine Learning Techniques</li>
+      <li>Data Wrangling and Cleaning</li>
+    </ul>
+  </section>
+
+  <section id="details">
+    <h2>Duration, Level, Price</h2>
+    <p><strong>Duration:</strong> 12 weeks</p>
+    <p><strong>Level:</strong> Intermediate to Advanced</p>
+    <p><strong>Price:</strong> $800</p>
+  </section>
+
+  <section id="enroll">
+    <h2>Enroll Now</h2>
+    <form action="submit_form.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required><br>
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company"><br>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
 </body>
 </html>

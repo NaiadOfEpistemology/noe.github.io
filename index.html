@@ -69,27 +69,27 @@
             <div class="course">
                 <img src="htmlcssjs.png" alt="Course 1">
                 <h3>Web Development Bootcamp</h3>
-                <a href="#" class="course-btn">Learn More</a>
+                <a href="course-web-development.html" class="course-btn" target="_blank" rel="noopener noreferrer">Learn More</a>
             </div>
             <div class="course">
                 <img src="digitalmarketing.jfif" alt="Course 2">
                 <h3>Digital Marketing</h3>
-                <a href="#" class="course-btn">Learn More</a>
+                <a href="course-digitalmarketing.html" class="course-btn" target="_blank" rel="noopener noreferrer">Learn More</a>
             </div>
             <div class="course">
                 <img src="cybersecurity.png" alt="Course 3">
                 <h3>Cybersecurity Fundamentals</h3>
-                <a href="#" class="course-btn">Learn More</a>
+                <a href="course-cybersecurity.html" class="course-btn" target="_blank" rel="noopener noreferrer">Learn More</a>
             </div>
             <div class="course">
                 <img src="mobileappdev.jfif" alt="Course 4">
                 <h3>Mobile App Development</h3>
-                <a href="#" class="course-btn">Learn More</a>
+                <a href="course-mobileappdevelopment.html" class="course-btn" target="_blank" rel="noopener noreferrer">Learn More</a>
             </div>
             <div class="course">
                 <img src="datascience.png" alt="Course 5">
                 <h3>Data Science 101</h3>
-                <a href="#" class="course-btn">Learn More</a>
+                <a href="course-data-science.html" class="course-btn" target="_blank" rel="noopener noreferrer">Learn More</a>
             </div>
         </div>
     </section>
@@ -111,16 +111,71 @@
         </div>
       </section>
       
+
+      <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Feel free to reach out with any questions or feedback.</p>
+      
+        <form class="contact-form" action="submit_form.php" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
       
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2024 Learning Repository - All Rights Reserved</p>
-    </footer>
+<footer>
+  <div class="footer-container">
+      <div class="footer-description">
+          <h4>About Us</h4>
+          <p>Our platform provides high-quality courses to help you advance your skills and build your career. Join us and start learning today!</p>
+      </div>
 
-    <script src="scripts.js"></script>
-    <script src="carousel.js"></script>
-    <script src="script.js"></script>
+      <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+              <li><a href="#benefits">Why Us</a></li>
+              <li><a href="#featured-courses">Courses</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-social">
+          <h4>Follow Us</h4>
+          <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook-icon.png" alt="Facebook">
+          </a>
+          <a href="https://twitter.com" target="_blank">
+              <img src="images/twitter-icon.png" alt="Twitter">
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+              <img src="images/linkedin-icon.png" alt="LinkedIn">
+          </a>
+      </div>
+
+      <div class="footer-map">
+          <h4>Where to Find Us</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15224.997569038818!2d78.36621958519578!3d17.447773555774653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557fa0ee!2sHITEC%20City%2C%20Hyderabad%2C%20Telangana%20500081!5e0!3m2!1sen!2sin!4v1725977187496!5m2!1sen!2sin"
+          width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>&copy; Learning Repository. Designed by Tanvi Medapati.</p>
+  </div>
+</footer>
+
 
 </body>
 </html>
