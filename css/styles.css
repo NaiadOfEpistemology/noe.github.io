@@ -412,25 +412,25 @@ h1, h2, h3 {
     font-size: 50px;
     font-weight: bold;
     white-space: nowrap;
-    overflow: hidden; /* Hides the text that hasn't been "typed" yet */
-    border-right: 3px solid; /* Creates the blinking cursor effect */
+    overflow: hidden; 
+    border-right: 3px solid; 
     width: 0;
     animation: typing 4s steps(35, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
-/* Typing animation */
+
 @keyframes typing {
     from { width: 0; }
-    to { width: 100%; }  /* Typing out the full text */
+    to { width: 100%; } 
 }
 
-/* Blinking cursor animation */
+
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: black; } /* Blinking effect for the cursor */
+    50% { border-color: black; } 
 }
 
-/* Contact Us Section */
+
 .contact-section {
     padding: 60px 20px;
     text-align: center;
@@ -590,4 +590,81 @@ h1, h2, h3 {
 .testimonial h4 {
     font-size: 1.2em;
     color: #007BFF;
+}
+/* Header styling */
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left .signup-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.header-right h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Courses Menu Styling */
+#courses-menu {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#courses-menu h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category {
+    margin: 20px;
+    width: 200px;
+}
+
+.category h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category ul li {
+    margin: 5px 0;
+}
+
+.category ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.category ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
 }
