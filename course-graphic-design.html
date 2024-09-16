@@ -1,43 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphic Design Course</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Graphic Design Course</h1>
-    </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <div class="course-container">
-            <div class="course-details">
-                <h1>Mastering Graphic Design</h1>
-                <p>Learn the art of graphic design with our comprehensive course. Covering design principles, software tools, and creative techniques, this course will help you build a strong portfolio.</p>
-                <h2>What You'll Learn</h2>
-                    <ul>
-                        <li>Design Principles and Elements</li>
-                        <li>Mastering Adobe Photoshop and Illustrator</li>
-                        <li>Typography and Color Theory</li>
-                        <li>Creating Logos and Brand Identities</li>
-                        <li>Building a Design Portfolio</li>
-                    </ul>
-                <p><strong>Duration:</strong> 10 weeks</p>
-                <p><strong>Level:</strong> Beginner to Advanced</p>
-                <p><strong>Instructor:</strong> Alex Johnson</p>
-                <p><strong>Price:</strong> $399</p>
-                <a href="#" class="enroll-btn">Enroll Now</a>
-            </div>
+  <header>
+    <h1>Graphic Design Essentials</h1>
+  </header>
+
+  <section id="course-overview">
+    <h2>Course Overview</h2>
+    <p>This course provides everything from the basics to advanced methods of Adobe tools to upskill your graphic design game.</p>
+  </section>
+
+  <section id="importance">
+    <h2>Why is it Important?</h2>
+    <p>Graphic designing is essential for catching the attention of the audience. It is in high demand across all industries in the marketing sector and gaming industry.</p>
+  </section>
+
+  <section id="what-you-learn">
+    <h2>What You'll Learn</h2>
+    <ul>
+      <li>Design Principles and Elements</li>
+      <li>Mastering Adobe Photoshop and Illustrator</li>
+      <li>Typography and Color Theory</li>
+      <li>Creating Logos and Brand Identities</li>
+      <li>Building a Design Portfolio</li>
+    </ul>
+  </section>
+
+  <section id="details">
+    <h2>Duration, Level, Price</h2>
+    <p><strong>Duration:</strong> 10 weeks</p>
+    <p><strong>Level:</strong> Intermediate</p>
+    <p><strong>Price:</strong> $300</p>
+  </section>
+
+  <section id="enroll-form">
+    <h2>Enroll Now</h2>
+    <p>Fill in your details to get started with the course.</p>
+    <form action="submit_form.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required><br>
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company"><br>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-description">
+            <h4>About Us</h4>
+            <p>Our platform provides high-quality courses to help you advance your skills and build your career. Join us and start learning today!</p>
         </div>
-    </main>
+  
+        <div class="footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+                <li><a href="#benefits">Why Us</a></li>
+                <li><a href="#featured-courses">Courses</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="https://www.quora.com/profile/Tanvi-M-24" target="_blank">
+              <img src="quora.png" alt="Quora">
+          </a>
+          <a href="https://www.linkedin.com/in/tanvi-medapati-a9b943286/" target="_blank">
+              <img src="linkedin.png" alt="LinkedIn">
+          </a>
+          <a href="https://discord.com/login" target="_blank">
+              <img src="discord.jpg" alt="Discord">
+          </a>
+        </div>
+  
+        <div class="footer-map">
+            <h4>Where to Find Us</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15224.997569038818!2d78.36621958519578!3d17.447773555774653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557fa0ee!2sHITEC%20City%2C%20Hyderabad%2C%20Telangana%20500081!5e0!3m2!1sen!2sin!4v1725977187496!5m2!1sen!2sin"
+            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>&copy; Learning Repository. Designed by Tanvi Medapati.</p>
+    </div>
+  </footer>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2024 Learning Website</p>
-    </footer>
 </body>
 </html>
