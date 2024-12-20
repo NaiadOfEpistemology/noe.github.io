@@ -16,7 +16,8 @@
             <a href="#courses" class="cta-button">Get Started</a>
         </div>
     </section>
-    
+    <center><a href="course-selector.html" class="cta-button">Find Your Course</a></center>
+
     
     
     <!-- Features Section -->
@@ -43,17 +44,17 @@
     <div class="course-card">
         <h3>Web Development Bootcamp</h3>
         <p>Learn how to build dynamic websites from scratch with HTML, CSS, and JavaScript.</p>
-        <a href="course-web-development.html" class="learn-more-btn">Learn More</a> <!-- updated -->
+        <center><a href="course-web-development.html" class="learn-more-btn">Learn More</a> </center><!-- updated -->
       </div>
       <div class="course-card">
         <h3>Data Science Masterclass</h3>
         <p>Master data science fundamentals and advanced techniques with hands-on projects.</p>
-        <a href="course-data-science.html" class="learn-more-btn">Learn More</a> <!-- updated -->
+        <center><a href="course-data-science.html" class="learn-more-btn">Learn More</a></center> <!-- updated -->
       </div>
       <div class="course-card">
         <h3>Graphic Design Essentials</h3>
         <p>Unleash your creativity with professional design skills using Adobe tools.</p>
-        <a href="course-graphic-design.html" class="learn-more-btn">Learn More</a> <!-- updated -->
+        <center><a href="course-graphic-design.html" class="learn-more-btn">Learn More</a></center> <!-- updated -->
       </div>
       <section id="explore-courses">
         <div class="explore-btn-container">
@@ -93,26 +94,47 @@
             </div>
         </div>
     </section>
+
     <section id="testimonials">
         <h2>What Our Students Say</h2>
         <div class="testimonial-container">
           <div class="testimonial">
             <p>"Opinion 1"</p>
-            <h4>- Sravan Medapati</h4>
+            <h4>- Student</h4>
           </div>
           <div class="testimonial">
             <p>"Opinion 2"</p>
-            <h4>- Kalyani Medapati</h4>
+            <h4>- Student</h4>
           </div>
           <div class="testimonial">
             <p>"Opinion 3"</p>
-            <h4>- Samiha Medapati</h4>
+            <h4>- Student</h4>
           </div>
         </div>
       </section>
+      <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out with any questions or feedback.</p>
+      
+        <form class="contact-form" action="submit_form.php" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
       
 
-    <!-- Footer Section -->
+    
 <footer>
   <div class="footer-container">
       <div class="footer-description">
