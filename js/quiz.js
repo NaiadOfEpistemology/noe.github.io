@@ -10,19 +10,19 @@ document.getElementById("quiz-form").addEventListener("submit", function (event)
   
     if (interest === "web-dev") {
       recommendedCourse = "Web Development Bootcamp";
-      courseLink = "web-development.html";
+      courseLink = "course-web-development.html";
     } else if (interest === "data-science") {
       recommendedCourse = "Data Science Masterclass";
-      courseLink = "data-science.html";
+      courseLink = "course-data-science.html";
     } else if (interest === "digital-marketing") {
       recommendedCourse = "Digital Marketing Course";
-      courseLink = "digital-marketing.html";
+      courseLink = "course-digitalmarketing.html";
     } else if (interest === "cybersecurity") {
       recommendedCourse = "Cybersecurity Fundamentals";
-      courseLink = "cybersecurity.html";
+      courseLink = "course-cybersecurity.html";
     } else if (interest === "app-development") {
       recommendedCourse = "Mobile App Development";
-      courseLink = "mobile-app-development.html";
+      courseLink = "course-mobileappdevelopment.html";
     }
   
     // Show result
