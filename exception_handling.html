@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling - Python Learning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu(id) {
+            var subMenu = document.getElementById(id);
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            <ul>
+                <li><a href="intro_to_python.html">1. Introduction to Python</a></li>
+                <li><a href="data_types.html">2. Data Types and Variables</a></li>
+                <li><a href="control_structures.html">3. Control Structures</a></li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li><a href="modules_packages.html">5. Modules and Packages</a></li>
+                <li><a href="file_handling.html">6. File Handling</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu('exception-handling-sub-menu')">7. Exception Handling</a>
+                    <ul id="exception-handling-sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#try-except">Try, Except Blocks</a></li>
+                        <li><a href="#finally">Finally Clause</a></li>
+                        <li><a href="#custom-exceptions">Custom Exceptions</a></li>
+                    </ul>
+                </li>
+                <li><a href="oop.html">8. Object-Oriented Programming (OOP)</a></li>
+                <li><a href="data_structures.html">9. Data Structures</a></li>
+                
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Exception Handling</h1>
+
+                <h2 id="try-except">Try, Except Blocks</h2>
+                <p>Try, except blocks allow you to handle exceptions (errors) that may occur in your code. The try block contains the code that may raise an exception, and the except block contains the code to handle the exception.</p>
+                <pre><code>
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("You can't divide by zero.")
+# Output: You can't divide by zero.
+                </code></pre>
+
+                <h2 id="finally">Finally Clause</h2>
+                <p>The finally clause is used to specify a block of code that will be executed no matter whether an exception is raised or not. This is typically used for cleanup actions.</p>
+                <pre><code>
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("You can't divide by zero.")
+finally:
+    print("This code runs no matter what.")
+# Output: You can't divide by zero.
+#         This code runs no matter what.
+                </code></pre>
+
+                <h2 id="custom-exceptions">Custom Exceptions</h2>
+                <p>You can define your own custom exceptions by creating a new class that inherits from the built-in `Exception` class. This allows you to raise and handle exceptions that are specific to your application.</p>
+                <pre><code>
+class MyCustomError(Exception):
+    pass
+
+try:
+    raise MyCustomError("An error occurred in the application.")
+except MyCustomError as e:
+    print(e)
+# Output: An error occurred in the application.
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='file_handling.html'">Previous</button>
+                    <button onclick="location.href='oop.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

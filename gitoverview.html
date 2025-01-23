@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Python Topics - Learning Repository</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+            function toggleSubMenu() {
+                var subMenu = document.getElementById("sub-menu");
+                if (subMenu.style.display === "block") {
+                    subMenu.style.display = "none";
+                } else {
+                    subMenu.style.display = "block";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="sidebar">
+                <h3>Git Tutorial</h3>
+                <ul>
+                    <li><a href="git.html">1. Introduction to Git</a></li>
+                    <li>
+                        <a href="javascript:void(0);" onclick="toggleSubMenu()">2. Git Overview</a>
+                        <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                            <li><a href="#key-features">Key Features</a></li>
+                            <li><a href="#git-workflow">Git Workflow</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gitbasics">3. Git Basics</a></li>
+                    <li><a href="gitadvanced">4. Git Advanced</a></li>
+                </ul>
+            </div>
+            <section id="content" class="content-section">
+                <div class="content-container">
+                    <h1>Welcome to Git tutorial</h1>
+                    <h2 id="topic1">Git Features</h2>
+    
+                    <h3 id="key-features">Key Features of Git</h3>
+                    <p>The key features of Git are: 
+                        <ul>
+                            <li>Distributed system version control.</li>
+                            <li>Support for non - linear, remote development.</li>
+                            <li>Branching and merging capabilities.</li>
+                            <li>Data safety assurance through cryptographic methods.</li>
+                            <li>Efficient and reliable in handling large projects.</li>
+                        </ul>
+                    </p>
+    
+                    <h3 id="git-workflow">Git Workflow</h3>
+                    <p>A workflow is a process that outlines the steps required to complete a task or project. Workflows are used to manage repetitive tasks and processes in businesses. The workflow of Git is as follows.
+                        <ul>
+                            <li>Basic workflow (clone, add, commit, push, pull).</li>
+                            <li>Staging area (index) and its role.</li>
+                            <li>Remote repositories and collaboration.</li>
+                        </ul>
+                    </p>
+                    <div class="buttons">
+                        <button onclick="location.href='git.html'">Previous</button>
+                        <button onclick="location.href='gitbasics.html'">Next</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+                
+            </main>
+        </div>
+    
+    </body>
+    </html>
+    

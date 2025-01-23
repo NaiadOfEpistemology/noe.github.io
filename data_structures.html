@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures - Python Learning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu(id) {
+            var subMenu = document.getElementById(id);
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            <ul>
+                <li><a href="intro_to_python.html">1. Introduction to Python</a></li>
+                <li><a href="data_types.html">2. Data Types and Variables</a></li>
+                <li><a href="control_structures.html">3. Control Structures</a></li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li><a href="modules_packages.html">5. Modules and Packages</a></li>
+                <li><a href="file_handling.html">6. File Handling</a></li>
+                <li><a href="exception_handling.html">7. Exception Handling</a></li>
+                <li><a href="oop.html">8. Object-Oriented Programming (OOP)</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu('data-structures-sub-menu')">9. Data Structures</a>
+                    <ul id="data-structures-sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#lists">Lists</a></li>
+                        <li><a href="#stacks">Stacks</a></li>
+                        <li><a href="#queues">Queues</a></li>
+                        <li><a href="#trees">Trees</a></li>
+                        <li><a href="#graphs">Graphs</a></li>
+                    </ul>
+                </li>
+            
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Data Structures</h1>
+
+                <h2 id="lists">Lists</h2>
+                <pLists are ordered collections of items, allowing for duplicates and heterogeneous data. Lists are mutable, meaning their elements can be changed.</p>
+                <pre><code>
+# Creating a list
+fruits = ["apple", "banana", "cherry"]
+print(fruits)  # Output: ['apple', 'banana', 'cherry']
+
+# Adding an item to the list
+fruits.append("date")
+print(fruits)  # Output: ['apple', 'banana', 'cherry', 'date']
+
+# Removing an item from the list
+fruits.remove("banana")
+print(fruits)  # Output: ['apple', 'cherry', 'date']
+
+# Accessing an item by index
+print(fruits[0])  # Output: apple
+                </code></pre>
+
+                <h2 id="stacks">Stacks</h2>
+                <p>Stacks are data structures that follow the Last In First Out (LIFO) principle. You can use lists to implement stacks in Python.</p>
+                <pre><code>
+stack = []
+
+# Pushing items onto the stack
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print(stack) 

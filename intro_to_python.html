@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Topics - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">1. Introduction to Python</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#what-is-python">What is Python?</a></li>
+                        <li><a href="#installing-python">Installing Python and Setting Up the Environment</a></li>
+                        <li><a href="#running-scripts">Running Python Scripts</a></li>
+                    </ul>
+                </li>
+                <li><a href="data_types.html">2. Data Types and Variables</a></li>
+                <li><a href="control_structures.html">3. Control Structures</a></li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li><a href="modules_packages.html">5. Modules and Packages</a></li>
+                <li><a href="file_handling.html">6. File Handling</a></li>
+                <li><a href="exception_handling.html">7. Exception Handling</a></li>
+                <li><a href="oop.html">8. Object-Oriented Programming (OOP)</a></li>
+                <li><a href="data_structures.html">9. Data Structures</a></li>
+                
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Welcome to Python Learning</h1>
+                <h2 id="topic1">Introduction to Python</h2>
+
+                <h3 id="what-is-python">What is Python?</h3>
+                <p>Python is a versatile and high-level programming language known for its simplicity and readability. It's widely used for web development, data analysis, artificial intelligence, scientific computing, and more. With a large community and extensive libraries, Python provides robust solutions for a variety of projects.</p>
+
+                <h3 id="installing-python">Installing Python and Setting Up the Environment</h3>
+                <p>To start programming in Python, you need to install Python on your computer. You can download the latest version from the official Python website. After downloading and installing Python, you can set up your development environment using an Integrated Development Environment (IDE) like PyCharm, VSCode, or Jupyter Notebook.</p>
+
+                <h3 id="running-scripts">Running Python Scripts</h3>
+                <p>Once you have Python installed and your environment set up, you can start writing and running Python scripts. A Python script is a file containing Python code, typically with a .py extension. You can run Python scripts from the command line or within an IDE by opening the script and executing it.</p>
+
+                <div class="buttons">
+                    <button onclick="location.href='intro_to_python.html'">Previous</button>
+                    <button onclick="location.href='data_types.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

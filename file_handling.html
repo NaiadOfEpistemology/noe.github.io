@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Handling - Python Learning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu(id) {
+            var subMenu = document.getElementById(id);
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            <ul>
+                <li><a href="intro_to_python.html">1. Introduction to Python</a></li>
+                <li><a href="data_types.html">2. Data Types and Variables</a></li>
+                <li><a href="control_structures.html">3. Control Structures</a></li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li><a href="modules_packages.html">5. Modules and Packages</a></li>
+                    
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu('file-handling-sub-menu')">6. File Handling</a>
+                    <ul id="file-handling-sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#reading-files">Reading Files</a></li>
+                        <li><a href="#writing-files">Writing Files</a></li>
+                        <li><a href="#working-with-csv">Working with CSV Files</a></li>
+                        <li><a href="#working-with-json">Working with JSON Files</a></li>
+                    </ul>
+                </li>
+                <li><a href="exception_handling.html">7. Exception Handling</a></li>
+                <li><a href="oop.html">8. Object-Oriented Programming (OOP)</a></li>
+                <li><a href="data_structures.html">9. Data Structures</a></li>
+                
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>File Handling</h1>
+
+                <h2 id="reading-files">Reading Files</h2>
+                <p>Python provides built-in functions to read from files. The open() function is used to open a file in read mode, and the read() method is used to read the content.</p>
+                <pre><code>
+# Reading from a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+                </code></pre>
+
+                <h2 id="writing-files">Writing Files</h2>
+                <p>The open() function is also used to open a file in write mode, and the write() method is used to write content to the file. If the file does not exist, it will be created.</p>
+                <pre><code>
+# Writing to a file
+with open('example.txt', 'w') as file:
+    file.write('Hello, World!')
+                </code></pre>
+
+                <h2 id="working-with-csv">Working with CSV Files</h2>
+                <p>Python's csv module provides functionality to read from and write to CSV files.</p>
+                <pre><code>
+import csv
+
+# Writing to a CSV file
+with open('data.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Name', 'Age', 'City'])
+    writer.writerow(['Alice', 25, 'New York'])
+    writer.writerow(['Bob', 30, 'San Francisco'])
+
+# Reading from a CSV file
+with open('data.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+                </code></pre>
+
+                <h2 id="working-with-json">Working with JSON Files</h2>
+                <p>Python's `json` module allows you to work with JSON data, which is commonly used for data exchange.</p>
+                <pre><code>
+import json
+
+# Writing to a JSON file
+data = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+with open('data.json', 'w') as file:
+    json.dump(data, file)
+
+# Reading from a JSON file
+with open('data.json', 'r') as file:
+    data = json.load(file)
+    print(data)
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='modules_packages.html'">Previous</button>
+                    <button onclick="location.href='exception_handling.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

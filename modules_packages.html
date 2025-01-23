@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules and Packages - Python Learning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu(id) {
+            var subMenu = document.getElementById(id);
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            
+            <ul>
+                <li><a href="intro_to_python.html">1. Introduction to Python</a></li>
+                <li><a href="data_types.html">2. Data Types and Variables</a></li>
+                <li><a href="control_structures.html">3. Control Structures</a></li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu('modules-sub-menu')">5. Modules and Packages</a>
+                    <ul id="modules-sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#importing-modules">Importing Modules</a></li>
+                        <li><a href="#standard-library-modules">Standard Library Modules</a></li>
+                        <li><a href="#creating-packages">Creating and Using Packages</a></li>
+                    </ul>
+                </li>
+                <li><a href="file_handling.html">6. File Handling</a></li>
+                <li><a href="exception_handling.html">7. Exception Handling</a></li>
+                <li><a href="oop.html">8. Object-Oriented Programming (OOP)</a></li>
+                <li><a href="data_structures.html">9. Data Structures</a></li>
+                
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Modules and Packages</h1>
+
+                <h2 id="importing-modules">Importing Modules</h2>
+                <p>Modules are files containing Python code that can be imported and used in other Python programs. Use the `import` keyword to import a module.</p>
+                <pre><code>
+# Importing the math module
+import math
+
+# Using a function from the math module
+result = math.sqrt(16)
+print(result)  # Output: 4.0
+                </code></pre>
+
+                <h2 id="standard-library-modules">Standard Library Modules</h2>
+                <p>Python's standard library includes a wide range of modules that provide functions and utilities for various tasks.</p>
+                <pre><code>
+# Importing the random module
+import random
+
+# Using a function from the random module
+number = random.randint(1, 10)
+print(number)  # Output: A random number between 1 and 10
+
+# Importing the datetime module
+import datetime
+
+# Getting the current date and time
+now = datetime.datetime.now()
+print(now)  # Output: Current date and time
+                </code></pre>
+
+                <h2 id="creating-packages">Creating and Using Packages</h2>
+                <p>Packages are directories containing multiple modules. They allow you to organize your code into manageable sections.</p>
+                <pre><code>
+# Directory structure:
+# mypackage/
+#     __init__.py
+#     module1.py
+#     module2.py
+
+# __init__.py is usually an empty file that indicates the directory is a package.
+
+# Importing modules from a package
+from mypackage import module1, module2
+
+# Using functions from the imported modules
+module1.function1()
+module2.function2()
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='functions.html'">Previous</button>
+                    <button onclick="location.href='file_handling.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Git Concepts</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Git Tutorial</h3>
+            <ul>
+                <li><a href="git.html">1. Introduction to Git</a></li>
+                <li><a href="gitoverview.html">2. Git Overview</a></li>
+                <li><a href="gitbasics.html">3. Git Basics</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">4. Advanced Git</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#stashing">Stashing</a></li>
+                        <li><a href="#rebasing">Rebasing</a></li>
+                        <li><a href="#cherry-picking">Cherry-Picking</a></li>
+                        <li><a href="#tags">Working with Tags</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content Section -->
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Advanced Git Concepts</h1>
+
+                <h2 id="stashing">Stashing</h2>
+                <p>Stashing allows you to save changes without committing them, so you can switch branches or work on something else.</p>
+                <pre><code>
+# Save changes to the stash
+git stash
+
+# List stashed changes
+git stash list
+
+# Apply the latest stash
+git stash apply
+
+# Apply and remove the latest stash
+git stash pop
+                </code></pre>
+
+                <h2 id="rebasing">Rebasing</h2>
+                <p>Rebasing replays commits from one branch onto another, creating a linear commit history.</p>
+                <pre><code>
+# Rebase feature branch onto main
+git checkout feature-branch
+git rebase main
+
+# Resolving conflicts during rebase
+# Edit conflicting files, then run:
+git rebase --continue
+                </code></pre>
+
+                <h2 id="cherry-picking">Cherry-Picking</h2>
+                <p>Cherry-picking allows you to apply a specific commit from one branch to another.</p>
+                <pre><code>
+# Cherry-pick a specific commit
+git cherry-pick <commit-hash>
+
+# Example
+git cherry-pick a1b2c3d4
+                </code></pre>
+
+                <h2 id="tags">Working with Tags</h2>
+                <p>Tags mark specific points in your repository's history, often used for versioning.</p>
+                <pre><code>
+# Create an annotated tag
+git tag -a v1.0 -m "Version 1.0"
+
+# List all tags
+git tag
+
+# Push tags to remote
+git push origin --tags
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='gitbasics.html'">Previous</button>
+                    <button onclick="location.href='gitbestpractices.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

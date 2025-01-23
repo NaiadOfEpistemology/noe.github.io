@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types and Variables - Python Learning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            <ul>
+                <li><a href="intro_to_python.html">1. Introduction to Python</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">2. Data Types and Variables</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#numbers">Numbers (integers, floats, complex)</a></li>
+                        <li><a href="#strings">Strings</a></li>
+                        <li><a href="#booleans">Booleans</a></li>
+                        <li><a href="#lists">Lists</a></li>
+                        <li><a href="#tuples">Tuples</a></li>
+                        <li><a href="#dictionaries">Dictionaries</a></li>
+                        <li><a href="#sets">Sets</a></li>
+                        <li><a href="#type-conversion">Type Conversion</a></li>
+                    </ul>
+                </li>
+                <li><a href="control_structures.html">3. Control Structures</a></li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li><a href="modules_packages.html">5. Modules and Packages</a></li>
+                <li><a href="file_handling.html">6. File Handling</a></li>
+                <li><a href="exception_handling.html">7. Exception Handling</a></li>
+                <li><a href="oop.html">8. Object-Oriented Programming (OOP)</a></li>
+                <li><a href="data_structures.html">9. Data Structures</a></li>
+                
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Data Types and Variables</h1>
+
+                <h2 id="numbers">Numbers (integers, floats, complex)</h2>
+                <p>Numbers are used to store numeric values. Python supports integers, floating-point numbers, and complex numbers.</p>
+                <ul>
+                    <li><strong>Integers</strong>: Whole numbers (e.g., 1, -5, 42)</li>
+                    <li><strong>Floats</strong>: Decimal numbers (e.g., 3.14, -0.001)</li>
+                    <li><strong>Complex</strong>: Numbers with a real and imaginary part (e.g., 3+4j)</li>
+                </ul>
+                <pre><code>
+int_num = 10
+float_num = 3.14
+complex_num = 2 + 3j
+                </code></pre>
+
+                <h2 id="strings">Strings</h2>
+                <p>Strings are sequences of characters used to represent text.</p>
+                <pre><code>
+text = "Hello, World!"
+print(text.lower())  # Output: hello, world!
+print(text.upper())  # Output: HELLO, WORLD!
+print(text.replace("World", "Python"))  # Output: Hello, Python!
+print(text.split(", "))  # Output: ['Hello', 'World!']
+                </code></pre>
+
+                <h2 id="booleans">Booleans</h2>
+                <p>Booleans represent truth values True or False.</p>
+                <pre><code>
+is_valid = True
+has_error = False
+print(is_valid and has_error)  # Output: False
+print(is_valid or has_error)  # Output: True
+                </code></pre>
+
+                <h2 id="lists">Lists</h2>
+                <p>Lists are ordered collections of items, allowing for duplicates and heterogeneous data.</p>
+                <pre><code>
+fruits = ["apple", "banana", "cherry"]
+fruits.append("date")  # ['apple', 'banana', 'cherry', 'date']
+fruits.remove("banana")  # ['apple', 'cherry', 'date']
+print(fruits.pop(1))  # Output: cherry
+fruits.sort()  # ['apple', 'date']
+                </code></pre>
+
+                <h2 id="tuples">Tuples</h2>
+                <p>Tuples are ordered collections of items that are immutable (cannot be changed).</p>
+                <pre><code>
+colors = ("red", "green", "blue", "green")
+print(colors.count("green"))  # Output: 2
+print(colors.index("blue"))  # Output: 2
+                </code></pre>
+
+                <h2 id="dictionaries">Dictionaries</h2>
+                <p>Dictionaries are collections of key-value pairs.</p>
+                <pre><code>
+person = {"name": "Alice", "age": 25, "city": "New York"}
+print(person.get("name"))  # Output: Alice
+print(person.keys())  # Output: dict_keys(['name', 'age', 'city'])
+print(person.values())  # Output: dict_values(['Alice', 25, 'New York'])
+print(person.items())  # Output: dict_items([('name', 'Alice'), ('age', 25), ('city', 'New York')])
+                </code></pre>
+
+                <h2 id="sets">Sets</h2>
+                <p>Sets are unordered collections of unique items.</p>
+                <pre><code>
+numbers = {1, 2, 3, 4}
+numbers.add(5)  # {1, 2, 3, 4, 5}
+numbers.remove(3)  # {1, 2, 4, 5}
+evens = {2, 4, 6, 8}
+print(numbers.union(evens))  # Output: {1, 2, 4, 5, 6, 8}
+print(numbers.intersection(evens))  # Output: {2, 4}
+                </code></pre>
+
+                <h2 id="type-conversion">Type Conversion</h2>
+                <p>Python allows you to convert values from one type to another using type conversion functions.</p>
+                <pre><code>
+int_num = 10
+float_num = float(int_num)  # Converts int to float
+str_num = str(int_num)  # Converts int to string
+list_str = list("Hello")  # Converts string to list
+print(float_num)  # Output: 10.0
+print(str_num)  # Output: '10'
+print(list_str)  # Output: ['H', 'e', 'l', 'l', 'o']
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='intro_to_python.html'">Previous</button>
+                    <button onclick="location.href='control_structures.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

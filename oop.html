@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Oriented Programming (OOP) - Python Learning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu(id) {
+            var subMenu = document.getElementById(id);
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            <ul>
+                <li><a href="intro_to_python.html">1. Introduction to Python</a></li>
+                <li><a href="data_types.html">2. Data Types and Variables</a></li>
+                <li><a href="control_structures.html">3. Control Structures</a></li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li><a href="modules_packages.html">5. Modules and Packages</a></li>
+                <li><a href="file_handling.html">6. File Handling</a></li>
+                <li><a href="exception_handling.html">7. Exception Handling</a></li>
+                
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu('oop-sub-menu')">8. Object-Oriented Programming (OOP)</a>
+                    <ul id="oop-sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#classes-and-objects">Classes and Objects</a></li>
+                        <li><a href="#methods-and-attributes">Methods and Attributes</a></li>
+                        <li><a href="#inheritance">Inheritance</a></li>
+                        <li><a href="#polymorphism">Polymorphism</a></li>
+                        <li><a href="#encapsulation">Encapsulation</a></li>
+                    </ul>
+                </li>
+                <li><a href="data_structures.html">9. Data Structures</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Object-Oriented Programming (OOP)</h1>
+
+                <h2 id="classes-and-objects">Classes and Objects</h2>
+                <p>Classes are blueprints for creating objects. An object is an instance of a class.</p>
+                <pre><code>
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        return f"{self.name} is barking."
+
+my_dog = Dog("Buddy", 3)
+print(my_dog.bark())
+# Output: Buddy is barking.
+                </code></pre>
+
+                <h2 id="methods-and-attributes">Methods and Attributes</h2>
+                <p>Methods are functions defined within a class, and attributes are variables that belong to a class.</p>
+                <pre><code>
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * (self.radius ** 2)
+
+circle = Circle(5)
+print(circle.area())
+# Output: 78.5
+                </code></pre>
+
+                <h2 id="inheritance">Inheritance</h2>
+                <p>Inheritance allows you to create a new class based on an existing class. The new class inherits the attributes and methods of the existing class.</p>
+                <pre><code>
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return f"{self.name} makes a sound."
+
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} barks."
+
+dog = Dog("Buddy")
+print(dog.speak())
+# Output: Buddy barks.
+                </code></pre>
+
+                <h2 id="polymorphism">Polymorphism</h2>
+                <p>Polymorphism allows methods to do different things based on different factors.</p>

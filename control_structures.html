@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Structures - Python Learning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu(id) {
+            var subMenu = document.getElementById(id);
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Python Topics</h3>
+            <ul>
+                <li><a href="intro_to_python.html">1. Introduction to Python</a></li>
+                <li><a href="data_types.html">2. Data Types and Variables</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu('control-sub-menu')">3. Control Structures</a>
+                    <ul id="control-sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#conditional-statements">Conditional Statements (if, elif, else)</a></li>
+                        <li><a href="#loops">Loops (for, while)</a></li>
+                        <li><a href="#list-comprehensions">List Comprehensions</a></li>
+                    </ul>
+                </li>
+                <li><a href="functions.html">4. Functions</a></li>
+                <li><a href="modules_packages.html">5. Modules and Packages</a></li>
+                <li><a href="file_handling.html">6. File Handling</a></li>
+                <li><a href="exception_handling.html">7. Exception Handling</a></li>
+                <li><a href="oop.html">8. Object-Oriented Programming (OOP)</a></li>
+                <li><a href="data_structures.html">9. Data Structures</a></li>
+                
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Control Structures</h1>
+
+                <h2 id="conditional-statements">Conditional Statements (if, elif, else)</h2>
+                <p>Conditional statements allow you to execute certain parts of the code based on specific conditions.</p>
+                <pre><code>
+age = 18
+if age < 18:
+    print("You are a minor.")
+elif age == 18:
+    print("You are exactly 18 years old.")
+else:
+    print("You are an adult.")
+                </code></pre>
+
+                <h2 id="loops">Loops (for, while)</h2>
+                <p>Loops allow you to execute a block of code multiple times.</p>
+                <pre><code>
+# For loop
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+# Output: apple, banana, cherry
+
+# While loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+# Output: 0, 1, 2, 3, 4
+                </code></pre>
+
+                <h2 id="list-comprehensions">List Comprehensions</h2>
+                <p>List comprehensions provide a concise way to create lists.</p>
+                <pre><code>
+# Creating a list of squares
+squares = [x**2 for x in range(10)]
+print(squares)
+# Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Creating a list of even numbers
+evens = [x for x in range(20) if x % 2 == 0]
+print(evens)
+# Output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='data_types.html'">Previous</button>
+                    <button onclick="location.href='functions.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

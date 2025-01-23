@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Advanced Git Concepts - Learning Repository</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+            function toggleSubMenu() {
+                var subMenu = document.getElementById("sub-menu");
+                if (subMenu.style.display === "block") {
+                    subMenu.style.display = "none";
+                } else {
+                    subMenu.style.display = "block";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="sidebar">
+                <h3>Git Tutorial</h3>
+                <ul>
+                    <li><a href="git.html">1. Introduction to Git</a></li>
+                    <li>
+                        <a href="javascript:void(0);" onclick="toggleSubMenu()">2. Git Overview</a>
+                        <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                            <li><a href="git.html#key-features">Key Features</a></li>
+                            <li><a href="git.html#git-workflow">Git Workflow</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gitbasics.html">3. Git Basics</a></li>
+                    <li><a href="gitadvanced.html">4. Git Advanced</a></li>
+                </ul>
+            </div>
+            <section id="content" class="content-section">
+                <div class="content-container">
+                    <h1>Advanced Git Concepts</h1>
+                    
+                    <h2 id="rebasing">Rebasing</h2>
+                    <p>Rebasing rewrites commit history by integrating changes from one branch into another.</p>
+                    <pre><code>
+# Switch to the feature branch
+git checkout feature-branch
+
+# Rebase onto the main branch
+git rebase main
+                    </code></pre>
+                    <p>After rebasing, resolve conflicts (if any) and continue:</p>
+                    <pre><code>
+# Resolve conflicts manually
+git add <file>
+
+# Continue rebasing
+git rebase --continue
+                    </code></pre>
+
+                    <h2 id="stashing">Stashing</h2>
+                    <p>Stashing allows you to temporarily save uncommitted changes.</p>
+                    <pre><code>
+# Save changes to a stash
+git stash
+
+# List stashes
+git stash list
+
+# Apply the latest stash
+git stash apply
+                    </code></pre>
+                    <p>To drop or clear a stash:</p>
+                    <pre><code>
+# Drop the latest stash
+git stash drop
+
+# Clear all stashes
+git stash clear
+                    </code></pre>
+
+                    <h2 id="cherry-picking">Cherry-Picking</h2>
+                    <p>Cherry-picking lets you apply a specific commit from one branch to another.</p>
+                    <pre><code>
+# Apply a specific commit (use the commit hash)
+git cherry-pick <commit-hash>
+                    </code></pre>
+
+                    <h2 id="squashing">Squashing Commits</h2>
+                    <p>Squashing merges multiple commits into one, simplifying the commit history.</p>
+                    <pre><code>
+# Interactive rebase to squash commits
+git rebase -i HEAD~3
+
+# Mark commits as 'squash' (or 's') in the interactive editor
+# Save and exit
+                    </code></pre>
+
+                    <h2 id="bisect">Git Bisect</h2>
+                    <p>Bisect helps to find a commit that introduced a bug using binary search.</p>
+                    <pre><code>
+# Start bisecting
+git bisect start
+
+# Mark the current commit as bad
+git bisect bad
+
+# Mark a known good commit
+git bisect good <commit-hash>
+
+# Git will checkout commits for testing. Mark each as good or bad until the culprit is found.
+                    </code></pre>
+
+                    <div class="buttons">
+                        <button onclick="location.href='gitbasics.html'">Previous</button>
+                        <button onclick="location.href='gitbestpractices.html'">Next</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

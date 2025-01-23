@@ -1,4 +1,4 @@
-/* Global Styles */
+
 html {
     scroll-behavior: smooth;
   }
@@ -804,4 +804,65 @@ footer {
       width: 100%;
     }
   }
-  
+  .main-container { 
+    display: flex; 
+    width: 100%; 
+    max-width: 1200px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+  } 
+  .sidebar { 
+    width: 20%; 
+    background: #f4f4f4; 
+    padding: 20px; 
+  } 
+  .sidebar h3 { 
+    margin-top: 0; 
+  } 
+  .sidebar ul { 
+    list-style-type: none; 
+    padding: 0; 
+  } 
+  .sidebar ul li { 
+    margin: 10px 0; 
+  } 
+  .sidebar ul li a { 
+    text-decoration: none; 
+    color: #333; 
+  } 
+  .sidebar ul li a:hover { 
+    color: #007bff; 
+  } .content-section { 
+    width: 80%; 
+    text-align: center; 
+    padding: 40px; 
+  } 
+  .content-container { 
+    margin-bottom: 40px; 
+  } 
+  .buttons { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 20px; 
+  } 
+  .buttons button { 
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-size: 16px; 
+  } 
+  .buttons button:hover { 
+    background-color: #e0e0e0; 
+  } 
+  .editor { 
+    width: 100%; 
+    margin-top: 20px; 
+  } 
+  iframe { 
+    width: 100%; 
+    height: 500px; 
+    border: none;
+  }
