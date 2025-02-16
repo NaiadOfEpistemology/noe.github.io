@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Tutorial</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="sidebar">
+                <h3>C Topics</h3>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" onclick="toggleSubMenu()">1. Introduction to C language</a>
+                        <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                            <li><a href="#c-history">History of C</a></li>
+                            <li><a href="#applications">Applications</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#structure">Structure of a C program</a></li>
+                            <li><a href="#execution-flow">Execution flow of C program</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="c_data_types.html">2. Basic Concepts</a></li>
+                    <li><a href="c_control_structures.html">3. Control Structures</a></li>
+        
+                    <li><a href="c_arrays.html">4. Arrays in C</a></li>
+                    <li><a href="c_functions.html">5. Functions in C</a></li>
+                    <li><a href="c_storage_classes.html">6. Storage Classes</a></li>
+                    <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
+                    <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
+                    <li><a href="c_file_handling.html">9. File handling in C</a></li>
+                    
+                </ul>
+            </div>
+   
+</html>

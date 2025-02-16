@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Tutorial</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>C Topics</h3>
+            <ul>
+                <li><a href="clang.html">1. Introduction to C Language</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">2. Basic Concepts</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#tokens">Tokens</a></li>
+                        <li><a href="#identifiers">Identifiers</a></li>
+                        <li><a href="#constants">Constants</a></li>
+                        <li><a href="#variables">Variables</a></li>
+                        <li><a href="#datatypes">Data types</a></li>
+                        <li><a href="#iofuncs">Input and output finctions</a></li>
+                        <li><a href="#qualifiers">Qualifiers</a></li>
+                        <li><a href="#modifiers">Modifiers</a></li>
+                        <li><a href="#operators">Operators</a></li>
+                    </ul>
+                </li>
+                <li><a href="c_control_structures.html">3. Control Structures</a></li>
+                <li><a href="c_arrays.html">4. Arrays in C</a></li>
+                <li><a href="c_functions.html">5. Functions in C</a></li>
+                <li><a href="c_storage_classes.html">6. Storage Classes</a></li>
+                <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
+                <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
+                <li><a href="c_file_handling.html">9. File handling in C</a></li>  
+            </ul>
+        </div>
+</html>
