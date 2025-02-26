@@ -14,6 +14,34 @@ body, h1, h2, p {
     font-family: Arial, sans-serif;
 }
 
+.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .content-section {
+  background-color: #222;
+}
+
+body.dark-mode button {
+  background-color: #444;
+  color: white;
+  border: 1px solid #888;
+}
+
 body {
     line-height: 1.6;
 }

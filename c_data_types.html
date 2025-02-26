@@ -30,7 +30,7 @@
                         <li><a href="#constants">Constants</a></li>
                         <li><a href="#variables">Variables</a></li>
                         <li><a href="#datatypes">Data types</a></li>
-                        <li><a href="#iofuncs">Input and output finctions</a></li>
+                        <li><a href="#iofuncs">Input and output functions</a></li>
                         <li><a href="#qualifiers">Qualifiers</a></li>
                         <li><a href="#modifiers">Modifiers</a></li>
                         <li><a href="#operators">Operators</a></li>
@@ -45,4 +45,95 @@
                 <li><a href="c_file_handling.html">9. File handling in C</a></li>  
             </ul>
         </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Basic Concepts</h1>
+
+                <h2 id="tokens">Tokens</h2>
+                <p>In C programming, tokens are the smallest elements of a program. They are categorized into:</p>
+                <ul>
+                    <li>Keywords (e.g., <code>int</code>, <code>return</code>)</li>
+                    <li>Identifiers (e.g., variable names)</li>
+                    <li>Constants (e.g., <code>10</code>, <code>'a'</code>)</li>
+                    <li>Operators (e.g., <code>+</code>, <code>-</code>)</li>
+                    <li>Special symbols (e.g., <code>{</code>, <code>}</code>)</li>
+                </ul>
+
+                <h2 id="identifiers">Identifiers</h2>
+                <p>Identifiers are names given to various program elements such as variables, functions, arrays, etc. They must begin with a letter (a-z, A-Z) or an underscore (_) followed by letters, digits (0-9), or underscores.</p>
+
+                <h2 id="constants">Constants</h2>
+                <p>Constants are fixed values that do not change during the execution of a program. They can be of various types, such as integer constants, floating-point constants, character constants, and string literals.</p>
+
+                <h2 id="variables">Variables</h2>
+                <p>Variables are used to store data that can be modified during program execution. Each variable must be declared with a specific data type, which determines the kind of data it can hold.</p>
+
+                <h2 id="datatypes">Data types</h2>
+                <p>Data types specify the type of data that a variable can store. C has several built-in data types:</p>
+                <ul>
+                    <li><strong>Basic Data Types:</strong>
+                        <ul>
+                            <li><code>int</code>: Integer data type.</li>
+                            <li><code>float</code>: Floating-point data type.</li>
+                            <li><code>double</code>: Double-precision floating-point data type.</li>
+                            <li><code>char</code>: Character data type.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Derived Data Types:</strong>
+                        <ul>
+                            <li><code>array</code>: Collection of elements of the same type.</li>
+                            <li><code>pointer</code>: Variable that stores the memory address of another variable.</li>
+                            <li><code>structure</code>: Collection of variables of different types.</li>
+                            <li><code>union</code>: Collection of variables that share the same memory location.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Enumeration:</strong> User-defined data type consisting of integral constants.</li>
+                    <li><strong>Void:</strong> Represents an empty data type.</li>
+                </ul>
+
+                <h2 id="iofuncs">Input and output functions</h2>
+                <p>Input and output functions are used to read data from the keyboard and display data on the screen. Common I/O functions in C are:</p>
+                <ul>
+                    <li><code>scanf()</code>: Reads formatted input from the keyboard.</li>
+                    <li><code>printf()</code>: Prints formatted output to the screen.</li>
+                </ul>
+
+                <h2 id="qualifiers">Qualifiers</h2>
+                <p>Qualifiers are keywords used to modify the properties of variables. Common qualifiers in C are:</p>
+                <ul>
+                    <li><code>const</code>: Declares a variable as constant, preventing its value from being modified.</li>
+                    <li><code>volatile</code>: Indicates that a variable's value may be changed by external factors.</li>
+                </ul>
+
+                <h2 id="modifiers">Modifiers</h2>
+                <p>Modifiers are used to alter the meaning and size of basic data types. Common modifiers in C are:</p>
+                <ul>
+                    <li><code>signed</code>: Indicates that a variable can store both positive and negative values.</li>
+                    <li><code>unsigned</code>: Indicates that a variable can store only positive values.</li>
+                    <li><code>short</code>: Reduces the size of an integer variable.</li>
+                    <li><code>long</code>: Increases the size of an integer variable.</li>
+                </ul>
+
+                <h2 id="operators">Operators</h2>
+                <p>Operators are symbols used to perform operations on variables and values. They are categorized into:</p>
+                <ul>
+                    <li><strong>Arithmetic Operators:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+                    <li><strong>Relational Operators:</strong> <code>==</code>, <code>!=</code>, <code>></code>, <code><</code>, <code>>=</code>, <code><=</code></li>
+                    <li><strong>Logical Operators:</strong> <code>&&</code>, <code>||</code>, <code>!</code></li>
+                    <li><strong>Bitwise Operators:</strong> <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code><<</code>, <code>>></code></li>
+                    <li><strong>Assignment Operators:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code></li>
+                    <li><strong>Increment and Decrement Operators:</strong> <code>++</code>, <code>--</code></li>
+                    <li><strong>Conditional (Ternary) Operator:</strong> <code>?</code>:<code>:</code></li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='clang.html'">Previous</button>
+                <button onclick="location.href='c_control_structures.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>

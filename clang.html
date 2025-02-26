@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C Tutorial</title>
@@ -15,34 +15,108 @@
             }
         }
     </script>
-    </head>
-    <body>
-        <div class="main-container">
-            <div class="sidebar">
-                <h3>C Topics</h3>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>C Topics</h3>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">1. Introduction to C language</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#c-history">History of C</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#structure">Structure of a C program</a></li>
+                        <li><a href="#execution-flow">Execution flow of C program</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="c_data_types.html">2. Basic Concepts</a></li>
+                <li><a href="c_control_structures.html">3. Control Structures</a></li>
+
+                <li><a href="c_arrays.html">4. Arrays in C</a></li>
+                <li><a href="c_functions.html">5. Functions in C</a></li>
+                <li><a href="c_storage_classes.html">6. Storage Classes</a></li>
+                <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
+                <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
+                <li><a href="c_file_handling.html">9. File handling in C</a></li>
+                
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Introduction to C Language</h1>
+
+                <h2 id="c-history">History of C</h2>
+                <p>The C programming language was developed by Dennis Ritchie at Bell Labs in the early 1970s. It was designed as a system programming language for writing operating systems. The development of C was influenced by earlier languages such as B and BCPL. C gained widespread popularity because of its efficiency, portability, and the richness of its standard library. It has influenced many subsequent programming languages, including C++, Java, and Python.</p>
+
+                <h2 id="applications">Applications</h2>
+                <p>C is used in a wide variety of applications, including:</p>
                 <ul>
-                    <li>
-                        <a href="javascript:void(0);" onclick="toggleSubMenu()">1. Introduction to C language</a>
-                        <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
-                            <li><a href="#c-history">History of C</a></li>
-                            <li><a href="#applications">Applications</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#structure">Structure of a C program</a></li>
-                            <li><a href="#execution-flow">Execution flow of C program</a></li>
-                            
-                        </ul>
-                    </li>
-                    <li><a href="c_data_types.html">2. Basic Concepts</a></li>
-                    <li><a href="c_control_structures.html">3. Control Structures</a></li>
-        
-                    <li><a href="c_arrays.html">4. Arrays in C</a></li>
-                    <li><a href="c_functions.html">5. Functions in C</a></li>
-                    <li><a href="c_storage_classes.html">6. Storage Classes</a></li>
-                    <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
-                    <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
-                    <li><a href="c_file_handling.html">9. File handling in C</a></li>
-                    
+                    <li>Operating Systems (e.g., Unix, Linux, Windows)</li>
+                    <li>Embedded Systems</li>
+                    <li>System Programming</li>
+                    <li>Compiler Design</li>
+                    <li>Game Development</li>
+                    <li>Real-time Systems</li>
+                    <li>Database Systems</li>
+                </ul>
+
+                <h2 id="features">Features</h2>
+                <p>C is known for several key features:</p>
+                <ul>
+                    <li><strong>Simplicity:</strong> C has a straightforward syntax and a small set of keywords.</li>
+                    <li><strong>Efficiency:</strong> C provides low-level access to memory and hardware, making it a powerful language for system programming.</li>
+                    <li><strong>Portability:</strong> Programs written in C can be easily adapted to different computer systems.</li>
+                    <li><strong>Modularity:</strong> C supports functions and libraries, allowing code to be reused and organized.</li>
+                    <li><strong>Rich Library:</strong> The C standard library provides numerous built-in functions for common tasks.</li>
+                    <li><strong>Flexibility:</strong> C allows direct manipulation of hardware and memory, making it suitable for low-level programming.</li>
+                </ul>
+
+                <h2 id="structure">Structure of a C Program</h2>
+                <p>A typical C program consists of the following components:</p>
+                <ul>
+                    <li><strong>Preprocessor Directives:</strong> Instructions to the compiler to process before compilation (e.g., <code>#include</code>).</li>
+                    <li><strong>Main Function:</strong> The entry point of the program where execution begins (e.g., <code>int main()</code>).</li>
+                    <li><strong>Variable Declarations:</strong> Declaring variables used in the program.</li>
+                    <li><strong>Statements and Expressions:</strong> Instructions to be executed by the program.</li>
+                    <li><strong>Functions:</strong> Blocks of code that perform specific tasks and can be reused.</li>
+                </ul>
+                <pre><code>
+#include &lt;stdio.h&gt;  // Preprocessor directive
+
+// Main function
+int main() {
+    // Variable declaration
+    int num = 10;
+
+    // Print statement
+    printf("Hello, World! Number: %d\n", num);
+
+    // Return statement
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="execution-flow">Execution Flow of a C Program</h2>
+                <p>The execution flow of a C program typically follows these steps:</p>
+                <ul>
+                    <li><strong>Preprocessing:</strong> The preprocessor processes the preprocessor directives.</li>
+                    <li><strong>Compilation:</strong> The compiler translates the C code into assembly code.</li>
+                    <li><strong>Assembly:</strong> The assembler converts the assembly code into machine code.</li>
+                    <li><strong>Linking:</strong> The linker combines the machine code with necessary libraries to create an executable file.</li>
+                    <li><strong>Execution:</strong> The executable file is loaded into memory and executed by the operating system.</li>
                 </ul>
             </div>
-   
+            <div class="buttons">
+                <button onclick="location.href='clang.html'">Previous</button>
+                <button onclick="location.href='c_data_types.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>

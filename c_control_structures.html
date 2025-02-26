@@ -34,7 +34,7 @@
                         <li><a href="#while">While loop</a></li>
                         <li><a href="#for">For loop</a></li>
                         <li><a href="#dowhile">Do-while loop</a></li>
-                        <li><a href="unconditional">Unconditional Statements</a></li>
+                        <li><a href="#unconditional">Unconditional Statements</a></li>
                     </ul>
                 </li>
                 <li><a href="c_arrays.html">4. Arrays in C</a></li>
@@ -43,7 +43,144 @@
                 <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
                 <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
                 <li><a href="c_file_handling.html">9. File handling in C</a></li>  
-                    
             </ul>
         </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Control Structures in C</h1>
+
+                <h2 id="simpleif">Simple if</h2>
+                <p>The <code>if</code> statement is used to execute a block of code if a specified condition is true.</p>
+                <pre><code>
+if (condition) {
+    // Code to be executed if condition is true
+}
+                </code></pre>
+
+                <h2 id="ifelse">if-else construct</h2>
+                <p>The <code>if-else</code> statement is used to execute one block of code if a condition is true, and another block of code if the condition is false.</p>
+                <pre><code>
+if (condition) {
+    // Code to be executed if condition is true
+} else {
+    // Code to be executed if condition is false
+}
+                </code></pre>
+
+                <h2 id="ifelseifelse">if-else if-else ladder</h2>
+                <p>The <code>if-else if-else</code> ladder is used to test multiple conditions sequentially.</p>
+                <pre><code>
+if (condition1) {
+    // Code to be executed if condition1 is true
+} else if (condition2) {
+    // Code to be executed if condition2 is true
+} else {
+    // Code to be executed if all conditions are false
+}
+                </code></pre>
+
+                <h2 id="nestedif">Nested if</h2>
+                <p>A nested <code>if</code> statement is an <code>if</code> statement inside another <code>if</code> statement. It allows for more complex condition checks.</p>
+                <pre><code>
+if (condition1) {
+    // Code to be executed if condition1 is true
+    if (condition2) {
+        // Code to be executed if condition2 is true
+    }
+}
+                </code></pre>
+
+                <h2 id="switch">Switch case</h2>
+                <p>The <code>switch</code> statement is used to execute one block of code among many, based on the value of a variable or expression.</p>
+                <pre><code>
+switch (variable) {
+    case value1:
+        // Code to be executed if variable is equal to value1
+        break;
+    case value2:
+        // Code to be executed if variable is equal to value2
+        break;
+    // More cases
+    default:
+        // Code to be executed if variable doesn't match any case
+}
+                </code></pre>
+
+                <h2 id="while">While loop</h2>
+                <p>The <code>while</code> loop is used to execute a block of code repeatedly as long as a specified condition is true.</p>
+                <pre><code>
+while (condition) {
+    // Code to be executed while condition is true
+}
+                </code></pre>
+
+                <h2 id="for">For loop</h2>
+                <p>The <code>for</code> loop is used to execute a block of code a specific number of times. It is often used when the number of iterations is known beforehand.</p>
+                <pre><code>
+for (initialization; condition; increment/decrement) {
+    // Code to be executed for each iteration
+}
+                </code></pre>
+
+                <h2 id="dowhile">Do-while loop</h2>
+                <p>The <code>do-while</code> loop is similar to the <code>while</code> loop, but it guarantees that the block of code is executed at least once, as the condition is evaluated after the block of code has been executed.</p>
+                <pre><code>
+do {
+    // Code to be executed
+} while (condition);
+                </code></pre>
+
+                <h2 id="unconditional">Unconditional Statements</h2>
+                <p>Unconditional statements in C are used to control the flow of the program without any conditions. These include:</p>
+                <ul>
+                    <li><code>break</code>: Terminates the nearest enclosing loop or switch statement.</li>
+                    <li><code>continue</code>: Skips the remaining code inside the nearest enclosing loop and proceeds with the next iteration of the loop.</li>
+                    <li><code>goto</code>: Transfers control to the labeled statement.</li>
+                    <li><code>return</code>: Exits the current function and optionally returns a value to the calling function.</li>
+                </ul>
+                <pre><code>
+// Example of break statement
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break;
+    }
+    printf("%d\n", i);
+}
+
+// Example of continue statement
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue;
+    }
+    printf("%d\n", i);
+}
+
+// Example of goto statement
+int main() {
+    int x = 10;
+    if (x == 10) {
+        goto label;
+    }
+    printf("This will be skipped.\n");
+    label:
+    printf("This will be executed.\n");
+    return 0;
+}
+
+// Example of return statement
+int add(int a, int b) {
+    return a + b;
+}
+                </code></pre>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='c_data_types.html'">Previous</button>
+                <button onclick="location.href='c_arrays.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>

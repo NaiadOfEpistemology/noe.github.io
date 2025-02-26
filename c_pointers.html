@@ -27,7 +27,7 @@
                 <li><a href="c_arrays.html">4. Arrays in C</a></li>
                 <li><a href="c_functions.html">5. Functions in C</a></li>
                 <li><a href="c_storage_classes.html">6. Storage Classes</a></li>
-                <li><a href="c_storage_classes.html">7. User defined datatypes</a></li>
+                <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
                 <li>
                     <a href="javascript:void(0);" onclick="toggleSubMenu()">8. Pointers and memory allocation in C</a>
                     <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
@@ -39,7 +39,133 @@
                     </ul>
                 </li>
                 <li><a href="c_file_handling.html">9. File handling in C</a></li>  
-                    
             </ul>
         </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Pointers and Memory Allocation in C</h1>
+
+                <h2 id="types">Pointer</h2>
+                <p>A pointer is a variable that stores the memory address of another variable. Pointers are used to access and manipulate memory locations directly, making them powerful tools in C programming.</p>
+                <pre><code>
+// Example of a pointer
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 10;
+    int *ptr = &num;
+
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &num);
+    printf("Value stored in ptr: %p\n", ptr);
+    printf("Value pointed to by ptr: %d\n", *ptr);
+
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="arrayofptr">Array of Pointers</h2>
+                <p>An array of pointers is an array where each element is a pointer to a variable of the same type. This is useful for handling arrays of strings or other complex data structures.</p>
+                <pre><code>
+// Example of an array of pointers
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num1 = 10, num2 = 20, num3 = 30;
+    int *arr[3] = {&num1, &num2, &num3};
+
+    for (int i = 0; i < 3; i++) {
+        printf("Value of num%d: %d\n", i + 1, *arr[i]);
+    }
+
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="ptrtoptr">Pointer to Pointer</h2>
+                <p>A pointer to a pointer is a form of multiple indirection or a chain of pointers. It is a pointer that stores the address of another pointer.</p>
+                <pre><code>
+// Example of a pointer to a pointer
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 10;
+    int *ptr = &num;
+    int **pptr = &ptr;
+
+    printf("Value of num: %d\n", num);
+    printf("Value pointed to by ptr: %d\n", *ptr);
+    printf("Value pointed to by pptr: %d\n", **pptr);
+
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="ptrmath">Pointer Arithmetic</h2>
+                <p>Pointer arithmetic involves performing operations on pointers, such as addition, subtraction, and comparison. These operations are useful for iterating through arrays and other data structures.</p>
+                <pre><code>
+// Example of pointer arithmetic
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr = arr;
+
+    for (int i = 0; i < 5; i++) {
+        printf("Value at arr[%d]: %d\n", i, *(ptr + i));
+    }
+
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="memalloc">Memory Allocation</h2>
+                <p>Memory allocation in C is done dynamically using functions like <code>malloc()</code>, <code>calloc()</code>, <code>realloc()</code>, and <code>free()</code>. These functions are used to allocate and deallocate memory at runtime.</p>
+                <pre><code>
+// Example of dynamic memory allocation
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int *ptr;
+    int n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    ptr = (int*)malloc(n * sizeof(int));
+
+    if (ptr == NULL) {
+        printf("Memory not allocated.\n");
+        return 1;
+    }
+
+    printf("Memory successfully allocated.\n");
+
+    for (i = 0; i < n; i++) {
+        ptr[i] = i + 1;
+    }
+
+    printf("The elements of the array are: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", ptr[i]);
+    }
+
+    free(ptr);
+    printf("\nMemory successfully freed.\n");
+
+    return 0;
+}
+                </code></pre>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='c_userdefined.html'">Previous</button>
+                <button onclick="location.href='c_file_handling.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>

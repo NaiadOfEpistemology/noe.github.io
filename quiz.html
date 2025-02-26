@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Quiz - SkillStash</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+       <div class="container">
+            <div class="header-right">
+                <h1>SkillStash - Practice Questions</h1> 
+            </div>
+        </div>
+    </header>
+
+    <section id="quiz-section">
+        <h2 id="quiz-title">Loading...</h2>
+        <div id="quiz-container">
+            <p>Loading questions...</p>
+        </div>
+        <button id="submit-btn">Submit Answers</button>
+    </section>
+
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'general';
+        const quizTitle = document.getElementById("quiz-title");
+        const quizContainer = document.getElementById("quiz-container");
+
+        // Question bank
+        const questions = {
+            python: [
+                { q: "What is the output of print(2 ** 3)?", options: ["6", "8", "9", "12"], answer: "8" },
+                { q: "Which keyword is used to define a function?", options: ["def", "func", "define", "lambda"], answer: "def" }
+            ],
+            java: [
+                { q: "Which keyword is used for inheritance?", options: ["extends", "inherits", "super", "implements"], answer: "extends" },
+                { q: "What is the default value of an int variable?", options: ["0", "null", "undefined", "1"], answer: "0" }
+            ],
+            c: [
+                { q: "Which symbol is used to terminate a statement in C?", options: [";", ":", ".", ","], answer: ";" },
+                { q: "What is sizeof(int) in most compilers?", options: ["2", "4", "8", "16"], answer: "4" }
+            ],
+            html: [
+                { q: "Which tag is used to create a hyperlink?", options: ["<link>", "<a>", "<href>", "<url>"], answer: "<a>" },
+                { q: "What does HTML stand for?", options: ["Hyper Transfer Markup Language", "Hyper Text Markup Language", "High Tech Machine Learning", "Hyperlink and Text Markup Language"], answer: "Hyper Text Markup Language" }
+            ],
+            javascript: [
+                { q: "Which keyword is used to declare a variable?", options: ["var", "let", "const", "All of the above"], answer: "All of the above" },
+                { q: "What is the correct way to write a comment in JavaScript?", options: ["// comment", "<!-- comment -->", "/* comment */", "# comment"], answer: "// comment" }
+            ]
+        };
+
+        function loadQuiz() {
+            quizTitle.innerText = `Practice Questions: ${lang.toUpperCase()}`;
+            const langQuestions = questions[lang] || [];
+            
+            if (langQuestions.length === 0) {
+                quizContainer.innerHTML = "<p>No questions available for this language yet.</p>";
+                return;
+            }
+
+            quizContainer.innerHTML = langQuestions.map((q, index) => `
+                <div class="question">
+                    <p><strong>${index + 1}. ${q.q}</strong></p>
+                    ${q.options.map(option => `
+                        <label>
+                            <input type="radio" name="q${index}" value="${option}">
+                            ${option}
+                        </label>
+                    `).join('<br>')}
+                </div>
+            `).join('');
+
+            document.getElementById("submit-btn").style.display = "block";
+        }
+
+        document.getElementById("submit-btn").addEventListener("click", () => {
+            alert("Your answers have been submitted!");
+        });
+
+        window.onload = loadQuiz;
+    </script>
+
+</body>
+</html>

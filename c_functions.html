@@ -37,7 +37,100 @@
                 <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
                 <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
                 <li><a href="c_file_handling.html">9. File handling in C</a></li>  
-                    
             </ul>
         </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Functions in C</h1>
+
+                <h2 id="functiontypes">Types of Functions</h2>
+                <p>Functions in C can be categorized into two types:</p>
+                <ul>
+                    <li><strong>Library Functions:</strong> These are pre-defined functions provided by C libraries, such as <code>printf()</code>, <code>scanf()</code>, <code>sqrt()</code>, etc.</li>
+                    <li><strong>User-defined Functions:</strong> These are functions defined by the programmer to perform specific tasks.</li>
+                </ul>
+                <pre><code>
+// Example of a user-defined function
+#include &lt;stdio.h&gt;
+
+void greet() {
+    printf("Hello, World!\n");
+}
+
+int main() {
+    greet();  // Function call
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="recursion">Recursion</h2>
+                <p>Recursion is a technique where a function calls itself. It is used to solve problems that can be divided into smaller, similar problems.</p>
+                <pre><code>
+// Example of a recursive function to calculate factorial
+#include &lt;stdio.h&gt;
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int num = 5;
+    printf("Factorial of %d is %d\n", num, factorial(num));
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="cbvcbr">Call by Value, Call by Reference</h2>
+                <p>Functions in C can be called in two ways:</p>
+                <ul>
+                    <li><strong>Call by Value:</strong> A copy of the actual parameter's value is passed to the function. Changes made to the parameter inside the function do not affect the original value.</li>
+                    <pre><code>
+// Example of call by value
+#include &lt;stdio.h&gt;
+
+void add(int a, int b) {
+    a += b;
+    printf("Inside function: a = %d\n", a);
+}
+
+int main() {
+    int x = 10, y = 5;
+    add(x, y);
+    printf("Outside function: x = %d\n", x);
+    return 0;
+}
+                    </code></pre>
+                    <li><strong>Call by Reference:</strong> The address of the actual parameter is passed to the function. Changes made to the parameter inside the function affect the original value.</li>
+                    <pre><code>
+// Example of call by reference
+#include &lt;stdio.h&gt;
+
+void add(int *a, int *b) {
+    *a += *b;
+    printf("Inside function: a = %d\n", *a);
+}
+
+int main() {
+    int x = 10, y = 5;
+    add(&x, &y);
+    printf("Outside function: x = %d\n", x);
+    return 0;
+}
+                    </code></pre>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='c_arrays.html'">Previous</button>
+                <button onclick="location.href='c_storage_classes.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>

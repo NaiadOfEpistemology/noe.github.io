@@ -3,111 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Courses - SkillStash</title>
+    <title>Practice Questions - SkillStash</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header Section -->
+   
     <header>
        <div class="container">
-            
             <div class="header-right">
                 <h1>SkillStash</h1> 
             </div>
         </div>
     </header>
 
-    <!-- Menu Section -->
-    <section id="courses-menu">
-        <h2>Explore Our Programming Courses</h2>
-        <p>Choose from a wide variety of programming languages, categorized for easier navigation.</p>
+    <section id="practice-menu">
+        <h2>Practice Questions</h2>
+        <p>Select a programming language to test your knowledge.</p>
         <div class="menu-container">
-            <!--<div class="category">
-                <h3>Concepts and Fundamentals</h3>
-                <ul>
-                    <li><a href="daa.html">Design and Analysis of Algorithms</a></li>
-                    <li><a href="ds.html">Data Structures</a></li>
-                    <li><a href="dbms.html">Database Management Systems</a></li>
-                    
-                    <li><a href="#">Operating Systems</a></li>
-                    <li><a href="#">Big Data Analytics</a></li>
-                    <li><a href="#">Cloud Computing</a></li>
-                    <li><a href="#">Compiler Design</a></li>
-                </ul>
-            </div>-->
+            
             <div class="category">
                 <h3>Web Development</h3>
                 <ul>
-                    <li><a href="https://github.com/cassidoo/HTML-CSS-Tutorial">HTML and CSS</a></li>
-                    <li><a href="https://github.com/Asabeneh/30-Days-Of-JavaScript">JavaScript</a></li>
-                    <!--<li><a href="https://github.com/DaveSimoes/React-Tutorial-2024">React.js</a></li>-->
-                    <!--<li><a href="https://github.com/Subham-Maity/node-js-full-stack-tutorial">Node.js</a></li>-->
-                    
+                    <li><a href="quiz.html?lang=html">HTML and CSS</a></li>
+                    <li><a href="quiz.html?lang=javascript">JavaScript</a></li>
                 </ul>
             </div>
+            
             <div class="category">
                 <h3>Backend Languages</h3>
                 <ul>
-                    <li><a href="intro_to_python.html">Python</a></li>
-                    <!--<li><a href="https://docs.ruby-lang.org/en/3.3/">Ruby</a></li>-->
-                    <li><a href="Let Us Java.pdf">Java</a></li>
-                    <!--<li><a href="https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/index.html">C</a></li>-->
-                    <!--<li><a href="https://www.php.net/manual/en/index.php">PHP</a></li>-->
-                    <!--<li><a href="https://perldoc.perl.org/perl#Tutorials">Perl</a></li>-->
-                    <li><a href="clang.html">C</a></li>
+                    <li><a href="quiz.html?lang=python">Python</a></li>
+                    <li><a href="quiz.html?lang=java">Java</a></li>
+                    <li><a href="quiz.html?lang=c">C</a></li>
+                    <li><a href="quiz.html?lang=cpp">C++</a></li>
                 </ul>
             </div>
 
-            
             <div class="category">
                 <h3>Database</h3>
                 <ul>
-                    <li><a href="https://github.com/carlba/mysql-tutorial">SQL</a></li>
-                    <li><a href="https://github.com/mikeroyal/SQL-NoSQL-Guide">NoSQL</a></li>
-                    
+                    <li><a href="quiz.html?lang=sql">SQL</a></li>
+                    <li><a href="quiz.html?lang=nosql">NoSQL</a></li>
                 </ul>
             </div>
 
-            
             <div class="category">
                 <h3>App Development</h3>
                 <ul>
-                    <li><a href="https://kotlinlang.org/docs/kotlin-reference.pdf">Kotlin</a></li>
-                    <li><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/">Swift</a></li>
-                    <li><a href="https://docs.flutter.dev/get-started/install">Flutter</a></li>
+                    <li><a href="quiz.html?lang=kotlin">Kotlin</a></li>
+                    <li><a href="quiz.html?lang=swift">Swift</a></li>
+                    <li><a href="quiz.html?lang=flutter">Flutter</a></li>
                 </ul>
             </div>
-            <!--<div class="category">
-                <h3>CRM Systems</h3>
-                <ul>
-                    <li><a href="#">Salesforce</a></li>
-                    <li><a href="#">Pega</a></li>
-                    <li><a href="#">Microsoft Dynamics 365</a></li>
-                </ul>
-            </div>-->
 
-            
             <div class="category">
                 <h3>Cybersecurity</h3>
                 <ul>
-                    <li><a href="https://training.apnic.net/wp-content/uploads/sites/2/2016/12/TSEC01.pdf">Network Security</a></li>
-                    <li><a href="https://docs.kernel.org/kernel-hacking/index.html">Ethical Hacking</a></li>
-                    <!--<li><a href="https://www.geeksforgeeks.org/cryptography-and-its-types/">Cryptography</a></li>-->
-                    <!--<li><a href="https://github.com/protofire/blockchain-learning-path">Blockchain</a></li>-->
+                    <li><a href="quiz.html?lang=network-security">Network Security</a></li>
+                    <li><a href="quiz.html?lang=ethical-hacking">Ethical Hacking</a></li>
                 </ul>
             </div>
+
             <div class="category">
                 <h3>Version Control</h3>
                 <ul>
-                    <li><a href="git.html">Git</a></li>
-                    <li><a href="https://www.w3schools.com/git/git_remote_getstarted.asp?remote=github">GitHub/GitLab</a></li>
+                    <li><a href="quiz.html?lang=git">Git</a></li>
+                    <li><a href="quiz.html?lang=github">GitHub/GitLab</a></li>
                 </ul>
             </div>
-            
+
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <p>&copy; SkillStash - Learning Repository.</p>
     </footer>

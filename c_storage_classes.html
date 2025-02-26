@@ -39,7 +39,64 @@
                 <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
                 <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
                 <li><a href="c_file_handling.html">9. File handling in C</a></li>  
-                    
             </ul>
         </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Storage Classes in C</h1>
+
+                <h2 id="whatarethey">What are Storage Classes?</h2>
+                <p>Storage classes in C define the scope (visibility) and lifetime of variables and/or functions within a C program. These classes precede the type that they modify. There are four storage classes in C:</p>
+                
+                <h2 id="auto">Auto</h2>
+                <p>The <code>auto</code> storage class is the default storage class for all local variables. It is used to define variables that are stored in memory. <code>auto</code> variables are automatically created when the block in which they are defined is entered, and destroyed when the block is exited.</p>
+                <pre><code>
+void function() {
+    auto int num = 10;  // auto is optional
+    printf("%d\n", num);
+}
+                </code></pre>
+
+                <h2 id="static">Static</h2>
+                <p>The <code>static</code> storage class instructs the compiler to keep a local variable in existence during the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope. Therefore, making local variables static allows them to maintain their value between function calls. The <code>static</code> modifier may also be applied to global variables. When this is done, it causes that variable's scope to be restricted to the file in which it is declared.</p>
+                <pre><code>
+void function() {
+    static int count = 0;
+    count++;
+    printf("%d\n", count);
+}
+                </code></pre>
+
+                <h2 id="extern">Extern</h2>
+                <p>The <code>extern</code> storage class is used to give a reference of a global variable that is visible to all the program files. When you use <code>extern</code>, the variable cannot be initialized as all it does is point the variable name at a storage location that has been previously defined.</p>
+                <pre><code>
+// File1.c
+int num = 10;
+
+// File2.c
+extern int num;
+void function() {
+    printf("%d\n", num);  // Accesses the global variable num from File1.c
+}
+                </code></pre>
+
+                <h2 id="register">Register</h2>
+                <p>The <code>register</code> storage class is used to define variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&amp;' operator applied to it (as it does not have a memory location).</p>
+                <pre><code>
+void function() {
+    register int num = 10;
+    printf("%d\n", num);
+}
+                </code></pre>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='c_functions.html'">Previous</button>
+                <button onclick="location.href='c_userdefined.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>

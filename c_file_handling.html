@@ -27,19 +27,193 @@
                 <li><a href="c_arrays.html">4. Arrays in C</a></li>
                 <li><a href="c_functions.html">5. Functions in C</a></li>
                 <li><a href="c_storage_classes.html">6. Storage Classes</a></li>
-                <li><a href="c_storage_classes.html">7. User defined datatypes</a></li>
+                <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
                 <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
                 <li>
                     <a href="javascript:void(0);" onclick="toggleSubMenu()">9. File Handling</a>
                     <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
                         <li><a href="#concept">File</a></li>
                         <li><a href="#streams">Streams</a></li>
-                        <li><a href="#txtbin">Text and binary files</a></li>
-                        <li><a href="fileio">File I/O functions</a></li>
-                        <li><a href="#formattedio">Formatted I/O functions</a></li>
-                        <li><a href="#characterio">Character I/O functions</a></li>
+                        <li><a href="#txtbin">Text and Binary Files</a></li>
+                        <li><a href="#fileio">File I/O Functions</a></li>
+                        <li><a href="#formattedio">Formatted I/O Functions</a></li>
+                        <li><a href="#characterio">Character I/O Functions</a></li>
                     </ul>
                 </li>                
             </ul>
         </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>File Handling in C</h1>
+
+                <h2 id="concept">File</h2>
+                <p>A file is a named location that stores data or information permanently. C provides a number of functions to perform basic file operations, including creating, reading, writing, and closing files.</p>
+
+                <h2 id="streams">Streams</h2>
+                <p>In C, a stream is a sequence of bytes that acts as an interface between a program and an input/output device, such as a file. Streams can be divided into input streams (for reading data) and output streams (for writing data).</p>
+
+                <h2 id="txtbin">Text and Binary Files</h2>
+                <p>Files in C can be classified into two types: text files and binary files.</p>
+                <ul>
+                    <li><strong>Text Files:</strong> Text files contain data that can be read in a human-readable format. Each line of text is terminated with a newline character (<code>\n</code>).</li>
+                    <li><strong>Binary Files:</strong> Binary files contain data in a format that is not human-readable. They store data in the same format as it is stored in memory.</li>
+                </ul>
+
+                <h2 id="fileio">File I/O Functions</h2>
+                <p>C provides several functions to handle file input and output operations:</p>
+                <ul>
+                    <li><code>fopen()</code>: Opens a file and returns a file pointer.</li>
+                    <li><code>fclose()</code>: Closes a file.</li>
+                    <li><code>fgetc()</code>: Reads a character from a file.</li>
+                    <li><code>fputc()</code>: Writes a character to a file.</li>
+                    <li><code>fgets()</code>: Reads a string from a file.</li>
+                    <li><code>fputs()</code>: Writes a string to a file.</li>
+                    <li><code>fread()</code>: Reads a block of data from a file.</li>
+                    <li><code>fwrite()</code>: Writes a block of data to a file.</li>
+                    <li><code>fprintf()</code>: Writes formatted data to a file.</li>
+                    <li><code>fscanf()</code>: Reads formatted data from a file.</li>
+                </ul>
+                <pre><code>
+// Example of file I/O
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file;
+    char str[100];
+
+    // Opening a file for writing
+    file = fopen("example.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    // Writing to the file
+    fputs("Hello, World!", file);
+
+    // Closing the file
+    fclose(file);
+
+    // Opening the file for reading
+    file = fopen("example.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    // Reading from the file
+    fgets(str, 100, file);
+    printf("Content of the file: %s\n", str);
+
+    // Closing the file
+    fclose(file);
+
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="formattedio">Formatted I/O Functions</h2>
+                <p>Formatted I/O functions are used to read and write formatted data. These functions include:</p>
+                <ul>
+                    <li><code>fprintf()</code>: Writes formatted data to a file.</li>
+                    <li><code>fscanf()</code>: Reads formatted data from a file.</li>
+                </ul>
+                <pre><code>
+// Example of formatted I/O
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file;
+    int num1, num2;
+
+    // Opening a file for writing
+    file = fopen("numbers.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    // Writing formatted data to the file
+    fprintf(file, "%d %d\n", 10, 20);
+
+    // Closing the file
+    fclose(file);
+
+    // Opening the file for reading
+    file = fopen("numbers.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    // Reading formatted data from the file
+    fscanf(file, "%d %d", &num1, &num2);
+    printf("Numbers read from the file: %d, %d\n", num1, num2);
+
+    // Closing the file
+    fclose(file);
+
+    return 0;
+}
+                </code></pre>
+
+                <h2 id="characterio">Character I/O Functions</h2>
+                <p>Character I/O functions are used to read and write individual characters. These functions include:</p>
+                <ul>
+                    <li><code>fgetc()</code>: Reads a character from a file.</li>
+                    <li><code>fputc()</code>: Writes a character to a file.</li>
+                </ul>
+                <pre><code>
+// Example of character I/O
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file;
+    char ch;
+
+    // Opening a file for writing
+    file = fopen("chars.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    // Writing characters to the file
+    fputc('A', file);
+    fputc('B', file);
+    fputc('C', file);
+
+    // Closing the file
+    fclose(file);
+
+    // Opening the file for reading
+    file = fopen("chars.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    // Reading characters from the file
+    while ((ch = fgetc(file)) != EOF) {
+        printf("%c", ch);
+    }
+    printf("\n");
+
+    // Closing the file
+    fclose(file);
+
+    return 0;
+}
+                </code></pre>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='c_pointers.html'">Previous</button>
+                <button onclick="location.href='c_file_handling.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>

@@ -36,7 +36,73 @@
                 <li><a href="c_userdefined.html">7. User defined datatypes</a></li>
                 <li><a href="c_pointers.html">8. Pointers and memory allocation in C</a></li>
                 <li><a href="c_file_handling.html">9. File handling in C</a></li>  
-                    
             </ul>
         </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Arrays in C</h1>
+
+                <h2 id="intro">Introduction to Arrays</h2>
+                <p>An array is a collection of elements of the same type stored in contiguous memory locations. It allows you to store multiple values of the same type in a single variable, making it easier to manage and manipulate data.</p>
+                <p>Arrays are useful when you need to store a large number of related values, such as a list of numbers, characters, or other data types. They can be used to implement various data structures, such as lists, stacks, and queues.</p>
+                <pre><code>
+// Declaring and initializing an array
+int numbers[5] = {1, 2, 3, 4, 5};
+
+// Accessing array elements
+printf("%d", numbers[0]);  // Output: 1
+                </code></pre>
+
+                <h2 id="arraystypes">Types of Arrays</h2>
+                <p>There are several types of arrays in C:</p>
+                <ul>
+                    <li><strong>Single-dimensional Arrays:</strong> A single-dimensional array, also known as a one-dimensional array, is a simple list of elements. Each element is accessed using a single index.</li>
+                    <pre><code>
+// Declaring and initializing a single-dimensional array
+char letters[4] = {'a', 'b', 'c', 'd'};
+
+// Accessing elements in the array
+printf("%c", letters[2]);  // Output: c
+                    </code></pre>
+                    <li><strong>Multi-dimensional Arrays:</strong> Multi-dimensional arrays are arrays of arrays. The most common multi-dimensional array is the two-dimensional array, which can be visualized as a table or matrix.</li>
+                    <pre><code>
+// Declaring and initializing a two-dimensional array
+int matrix[3][3] = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+// Accessing elements in the array
+printf("%d", matrix[1][1]);  // Output: 5
+                    </code></pre>
+                    <li><strong>Three-dimensional Arrays:</strong> Three-dimensional arrays are arrays of two-dimensional arrays and can be visualized as a 3D grid.</li>
+                    <pre><code>
+// Declaring and initializing a three-dimensional array
+int threeD[2][2][2] = {
+    {
+        {1, 2},
+        {3, 4}
+    },
+    {
+        {5, 6},
+        {7, 8}
+    }
+};
+
+// Accessing elements in the array
+printf("%d", threeD[0][1][1]);  // Output: 4
+                    </code></pre>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='c_control_structures.html'">Previous</button>
+                <button onclick="location.href='c_functions.html'">Next</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
 </html>
