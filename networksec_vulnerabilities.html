@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Vulnerabilities - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Network Security Topics</h3>
+            <ul>
+                <li><a href="intro_to_network_security.html">1. Introduction to Network Security</a></li>
+                <li><a href="rtcs.html">2. Real-time Communication Security</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">3. Vulnerabilities</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#media-vulnerabilities">Media-Based Vulnerabilities</a></li>
+                        <li><a href="#device-vulnerabilities">Network Device Vulnerabilities</a></li>
+                        <li><a href="#back-doors">Back Doors</a></li>
+                        <li><a href="#dos">Denial of Service (DoS)</a></li>
+                        <li><a href="#spoofing">Spoofing</a></li>
+                        <li><a href="#mitm">Man-in-the-Middle Attacks</a></li>
+                        <li><a href="#protocol-attacks">Protocol-Based Attacks</a></li>
+                        <li><a href="#dns-attacks">DNS Attacks</a></li>
+                        <li><a href="#tcp-ip-hijacking">TCP/IP Hijacking</a></li>
+                        <li><a href="#vlan-dmz">VLAN and DMZ</a></li>
+                        <li><a href="#network-access-control">Network Access Control (NAC)</a></li>
+                        <li><a href="#proxy-server">Proxy Server</a></li>
+                        <li><a href="#honey-pot">Honey Pot</a></li>
+                        <li><a href="#nids">Network Intrusion Detection Systems (NIDS)</a></li>
+                        <li><a href="#protocol-analyzers">Protocol Analyzers</a></li>
+                        <li><a href="#content-filters">Internet Content Filters</a></li>
+                        <li><a href="#integrated-security">Integrated Network Security Hardware</a></li>
+                    </ul>
+                </li>
+                <li><a href="networksec_authentication.html">4. Authentication</a></li>
+                <li><a href="networksec_firewalls.html">5. Firewalls and Web Security</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Network Security Vulnerabilities</h1>
+
+                <h2 id="media-vulnerabilities">Media-Based Vulnerabilities</h2>
+                <p>Media-based vulnerabilities arise from the physical medium over which data is transmitted. These vulnerabilities include eavesdropping on electromagnetic signals, signal interference, and physical tampering with networking cables and hardware.</p>
+
+                <h2 id="device-vulnerabilities">Network Device Vulnerabilities</h2>
+                <p>Network devices such as routers, switches, and firewalls can have vulnerabilities that attackers exploit. Common vulnerabilities include outdated firmware, default configurations, and weak authentication mechanisms.</p>
+
+                <h2 id="back-doors">Back Doors</h2>
+                <p>Back doors are hidden entry points into a system that bypass regular authentication mechanisms. These can be intentionally or unintentionally introduced by developers, providing attackers with unauthorized access.</p>
+
+                <h2 id="dos">Denial of Service (DoS)</h2>
+                <p>A Denial of Service (DoS) attack aims to make a network resource unavailable to its intended users by overwhelming it with a flood of illegitimate requests. This can result in system crashes and service interruptions.</p>
+
+                <h2 id="spoofing">Spoofing</h2>
+                <p>Spoofing involves masquerading as a legitimate entity by falsifying data, such as IP addresses or email headers. Attackers use spoofing to gain unauthorized access, distribute malware, or launch further attacks.</p>
+
+                <h2 id="mitm">Man-in-the-Middle Attacks</h2>
+                <p>In a Man-in-the-Middle (MitM) attack, an attacker intercepts and possibly alters the communication between two parties without their knowledge. This allows the attacker to eavesdrop, steal data, or inject malicious content.</p>
+
+                <h2 id="protocol-attacks">Protocol-Based Attacks</h2>
+                <p>Protocol-based attacks exploit weaknesses in network communication protocols, such as TCP/IP, to disrupt services or gain unauthorized access. Examples include SYN flood attacks, TCP reset attacks, and session hijacking.</p>
+
+                <h2 id="dns-attacks">DNS Attacks</h2>
+                <p>DNS attacks target the Domain Name System (DNS) to redirect traffic, disrupt services, or steal information. Common DNS attacks include DNS spoofing, DNS poisoning, and DNS hijacking.</p>
+
+                <h2 id="tcp-ip-hijacking">TCP/IP Hijacking</h2>
+                <p>TCP/IP hijacking involves taking over an established TCP/IP communication session between two hosts. This allows the attacker to inject malicious data, steal information, or disrupt the session.</p>
+
+                <h2 id="vlan-dmz">VLAN and DMZ</h2>
+                <p>Virtual LAN (VLAN) and Demilitarized Zone (DMZ) are network segmentation techniques used to enhance security. VLANs logically segment a network to isolate traffic, while DMZs separate internal networks from external networks, providing an additional layer of security.</p>
+
+                <h2 id="network-access-control">Network Access Control (NAC)</h2>
+                <p>Network Access Control (NAC) enforces security policies by controlling the devices and users allowed to access the network. It helps ensure that only authorized and compliant devices can connect to the network.</p>
+
+                <h2 id="proxy-server">Proxy Server</h2>
+                <p>A proxy server acts as an intermediary between clients and servers, forwarding client requests to servers and returning server responses to clients. Proxies can improve security by anonymizing client requests and filtering malicious traffic.</p>
+
+                <h2 id="honey-pot">Honey Pot</h2>
+                <p>A honey pot is a decoy system designed to attract attackers and gather information about their techniques. It helps security professionals understand and mitigate threats by analyzing attacker behavior in a controlled environment.</p>
+
+                <h2 id="nids">Network Intrusion Detection Systems (NIDS)</h2>
+                <p>Network Intrusion Detection Systems (NIDS) monitor network traffic for suspicious activity and potential threats. They analyze network packets and compare them against known attack signatures or behavior patterns to detect intrusions.</p>
+
+                <h2 id="protocol-analyzers">Protocol Analyzers</h2>
+                <p>Protocol analyzers, also known as packet sniffers, capture and analyze network traffic to diagnose issues and monitor network performance. They help identify vulnerabilities and detect malicious activity.</p>
+
+                <h2 id="content-filters">Internet Content Filters</h2>
+                <p>Internet content filters block access to inappropriate or harmful content based on predefined criteria. They are commonly used in organizations and educational institutions to enforce acceptable use policies and protect users from malicious websites.</p>
+
+                <h2 id="integrated-security">Integrated Network Security Hardware</h2>
+                <p>Integrated network security hardware combines multiple security functions, such as firewalls, intrusion detection, and antivirus protection, into a single device. These devices provide comprehensive security solutions for protecting network infrastructures.</p>
+
+                <div class="buttons">
+                    <button onclick="location.href='rtcs.html'">Previous</button>
+                    <button onclick="location.href='networksec_authentication.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

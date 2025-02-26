@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security - Firewalls and Web Security</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            subMenu.style.display = subMenu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Network Security Topics</h3>
+            <ul>
+                <li><a href="intro_to_network_security.html">1. Introduction to Network Security</a></li>
+                <li><a href="rtcs.html">2. Real-time Communication Security</a></li>
+                <li><a href="networksec_vulnerabilities.html">3. Vulnerabilities</a></li>
+                <li><a href="networksec_authentication.html">4. Authentication</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">5. Firewalls & Web Security</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#packet-filters">Packet Filters</a></li>
+                        <li><a href="#app-gateways">Application-Level Gateways</a></li>
+                        <li><a href="#encrypted-tunnels">Encrypted Tunnels</a></li>
+                        <li><a href="#cookies">Cookies</a></li>
+                        <li><a href="#assignments">Assignments</a></li>
+                        <li><a href="#wireless-security">Security in Wireless Networks</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Firewalls and Web Security</h1>
+
+                <h2 id="packet-filters">Packet Filters</h2>
+                <p>Packet filtering is a firewall technique that controls network traffic based on predefined rules. It examines packet headers (IP addresses, ports, protocols) and allows or blocks traffic accordingly.</p>
+
+                <h3>Advantages:</h3>
+                <ul>
+                    <li>Fast and efficient</li>
+                    <li>Operates at the network layer</li>
+                </ul>
+
+                <h3>Disadvantages:</h3>
+                <ul>
+                    <li>Limited protection against advanced threats</li>
+                    <li>No deep packet inspection</li>
+                </ul>
+
+                <h2 id="app-gateways">Application-Level Gateways</h2>
+                <p>An Application-Level Gateway (ALG), also known as a proxy firewall, filters traffic at the application layer. It inspects and manages data before forwarding it, adding an extra security layer.</p>
+
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Prevents direct client-server connections</li>
+                    <li>Provides detailed control over data flow</li>
+                    <li>Slower compared to packet filters</li>
+                </ul>
+
+                <h2 id="encrypted-tunnels">Encrypted Tunnels</h2>
+                <p>Encrypted tunnels protect data transmission by encapsulating network traffic within secure, encrypted channels. VPNs (Virtual Private Networks) and SSH tunnels are common examples.</p>
+
+                <h3>Benefits:</h3>
+                <ul>
+                    <li>Prevents data interception</li>
+                    <li>Ensures privacy over untrusted networks</li>
+                </ul>
+
+                <h2 id="cookies">Cookies</h2>
+                <p>Cookies store small pieces of user data on a browser, enabling session management and personalization. However, they also pose security risks such as cross-site scripting (XSS) and session hijacking.</p>
+
+                <h3>Security Measures:</h3>
+                <ul>
+                    <li>Use HTTP-only and secure cookies</li>
+                    <li>Implement same-site restrictions</li>
+                    <li>Regularly clear and manage cookies</li>
+                </ul>
+
+                <h2 id="assignments">Assignments on Latest Network Security Techniques</h2>
+                <p>Explore the latest advancements in network security:</p>
+                <ul>
+                    <li>Zero Trust Architecture (ZTA)</li>
+                    <li>Next-Gen Firewalls (NGFWs)</li>
+                    <li>AI-driven Intrusion Detection Systems (IDS)</li>
+                    <li>Blockchain for Secure Transactions</li>
+                    <li>Quantum Cryptography</li>
+                </ul>
+
+                <h2 id="wireless-security">Security Applications in Wireless Networks</h2>
+                <p>Wireless Sensor Networks (WSNs) and wireless communication networks face unique security challenges, including:</p>
+
+                <h3>Key Security Concerns:</h3>
+                <ul>
+                    <li>Data encryption in sensor nodes</li>
+                    <li>Authentication protocols in wireless networks</li>
+                    <li>Mitigating denial-of-service (DoS) attacks</li>
+                    <li>Secure key distribution mechanisms</li>
+                </ul>
+
+                <div class="buttons">
+                    <button onclick="location.href='networksec_authentication.html'">Previous</button>
+                    <button onclick="location.href='next_section.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>
