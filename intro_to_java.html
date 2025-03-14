@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Java - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Core Java Topics</h3>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">1. Introduction to Core Java</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#java-overview">Java Overview</a></li>
+                        <li><a href="#features">Features of Java</a></li>
+                        <li><a href="#java-setup">Installing Java and Setting Up the Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="java_basics.html">2. Java Basics</a></li>
+                <li><a href="java_oop.html">3. Object-Oriented Programming</a></li>
+                <li><a href="java_exception_handling.html">4. Exception Handling</a></li>
+                <li><a href="java_collections.html">5. Collections Framework</a></li>
+                <li><a href="java_multithreading.html">6. Multithreading</a></li>
+                <li><a href="java_file_handling.html">7. File Handling</a></li>
+                <li><a href="java_networking.html">8. Networking</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Introduction to Core Java</h1>
+
+                <h2 id="java-overview">Java Overview</h2>
+                <p>Java is a high-level, object-oriented programming language designed to have as few implementation dependencies as possible. It is widely used for developing desktop, web, and mobile applications, as well as large-scale enterprise systems.</p>
+
+                <h2 id="features">Features of Java</h2>
+                <p>Java comes with several key features that make it a popular choice among developers:</p>
+                <ul>
+                    <li><strong>Platform Independence:</strong> Write once, run anywhere with the help of the Java Virtual Machine (JVM).</li>
+                    <li><strong>Object-Oriented:</strong> Everything in Java revolves around objects and classes.</li>
+                    <li><strong>Robust:</strong> Strong memory management, exception handling, and garbage collection mechanisms.</li>
+                    <li><strong>Secure:</strong> Provides a secure runtime environment by avoiding explicit memory manipulation.</li>
+                    <li><strong>Multithreaded:</strong> Supports concurrent execution of threads for better performance.</li>
+                    <li><strong>Rich API:</strong> Offers a vast collection of built-in libraries for tasks ranging from data structures to networking.</li>
+                </ul>
+
+                <h2 id="java-setup">Installing Java and Setting Up the Environment</h2>
+                <p>To get started with Java, you'll need to install the Java Development Kit (JDK). You can download the latest JDK version from the official Oracle website. Once installed, set up the PATH and JAVA_HOME environment variables to ensure that Java is accessible from the command line.</p>
+                <pre><code>
+# Example of setting up PATH on Windows:
+SET PATH=C:\Program Files\Java\jdk-XX\bin;%PATH%
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='#'">Previous</button>
+                    <button onclick="location.href='java_basics.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

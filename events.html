@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>JavaScript Topics</h3>
+            <ul>
+                <li><a href="intro_to_javascript.html">1. Introduction to JavaScript</a></li>
+                <li><a href="javascript_basics.html">2. JavaScript Basics</a></li>
+                <li><a href="dom_manipulation.html">3. DOM Manipulation</a></li>
+                <li>
+                    <a href="javascript:void(0);">4. JavaScript Events</a>
+                </li>
+                <li><a href="async_programming.html">5. Asynchronous Programming</a></li>
+                <li><a href="javascript_project.html">6. JavaScript Project</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>JavaScript Events</h1>
+
+                <h2>What are JavaScript Events?</h2>
+                <p>Events are actions or occurrences that happen in the browser. Examples include user interactions like clicking, hovering, or typing, and system events like page loading or resizing the window.</p>
+
+                <h2>Adding Event Listeners</h2>
+                <p>Event listeners allow JavaScript to "listen" for events on an element and execute a function when the event occurs. Use <code>addEventListener()</code> to register event handlers.</p>
+                <pre><code>
+// Example of addEventListener
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+                </code></pre>
+
+                <h2>Common Event Types</h2>
+                <p>JavaScript supports various types of events, such as:</p>
+                <ul>
+                    <li><strong>Mouse Events:</strong> <code>click</code>, <code>dblclick</code>, <code>mouseover</code>, <code>mouseout</code></li>
+                    <li><strong>Keyboard Events:</strong> <code>keydown</code>, <code>keyup</code>, <code>keypress</code></li>
+                    <li><strong>Form Events:</strong> <code>submit</code>, <code>change</code>, <code>input</code></li>
+                    <li><strong>Window Events:</strong> <code>load</code>, <code>resize</code>, <code>scroll</code></li>
+                </ul>
+
+                <h2>Inline Event Handling</h2>
+                <p>Inline event handling involves adding event listeners directly within the HTML element using attributes like <code>onclick</code>, <code>onchange</code>, or <code>onmouseover</code>.</p>
+                <pre><code>
+<!-- Inline Event Example -->
+<button onclick="alert('Button clicked!')">Click Me</button>
+                </code></pre>
+
+                <h2>Removing Event Listeners</h2>
+                <p>Use <code>removeEventListener()</code> to detach an event listener from an element.</p>
+                <pre><code>
+// Example of removeEventListener
+function sayHello() {
+    alert("Hello!");
+}
+const button = document.getElementById("myButton");
+button.addEventListener("click", sayHello);
+
+// Later, remove the event listener
+button.removeEventListener("click", sayHello);
+                </code></pre>
+
+                <h2>Event Object</h2>
+                <p>The <code>event</code> object provides information about the event and allows you to interact with it. It is automatically passed to event handler functions.</p>
+                <pre><code>
+// Example of Event Object
+document.getElementById("myButton").addEventListener("click", function(event) {
+    console.log("Event Type: " + event.type);
+    console.log("Target Element: " + event.target);
+});
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='dom_manipulation.html'">Previous</button>
+                    <button onclick="location.href='async_programming.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

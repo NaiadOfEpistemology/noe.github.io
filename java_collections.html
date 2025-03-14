@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections Framework - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Core Java Topics</h3>
+            <ul>
+                <li><a href="intro_to_java.html">1. Introduction to Core Java</a></li>
+                <li><a href="java_basics.html">2. Java Basics</a></li>
+                <li><a href="java_oop.html">3. Object-Oriented Programming</a></li>
+                <li><a href="java_exception_handling.html">4. Exception Handling</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">5. Collections Framework</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#interfaces">Core Interfaces</a></li>
+                        <li><a href="#list">List Interface</a></li>
+                        <li><a href="#set">Set Interface</a></li>
+                        <li><a href="#map">Map Interface</a></li>
+                        <li><a href="#queue">Queue Interface</a></li>
+                    </ul>
+                </li>
+                <li><a href="java_multithreading.html">6. Multithreading</a></li>
+                <li><a href="java_file_handling.html">7. File Handling</a></li>
+                <li><a href="java_networking.html">8. Networking</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Collections Framework</h1>
+
+                <h2 id="overview">Overview</h2>
+                <p>The Java Collections Framework is a unified architecture for representing and manipulating collections of data. It includes interfaces, classes, and algorithms to handle collections such as lists, sets, maps, and queues efficiently.</p>
+                <pre><code>
+// Example of a collection (ArrayList)
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+        
+        System.out.println(list);
+    }
+}
+                </code></pre>
+
+                <h2 id="interfaces">Core Interfaces</h2>
+                <p>The key interfaces of the Collections Framework include:</p>
+                <ul>
+                    <li><strong>List:</strong> Ordered collection that allows duplicate elements.</li>
+                    <li><strong>Set:</strong> Collection that doesn't allow duplicate elements.</li>
+                    <li><strong>Map:</strong> Collection of key-value pairs where keys are unique.</li>
+                    <li><strong>Queue:</strong> Collection used to hold elements for processing in FIFO (First-In-First-Out) order.</li>
+                </ul>
+
+                <h2 id="list">List Interface</h2>
+                <p>The <code>List</code> interface provides methods for working with ordered collections that allow duplicate elements. Common implementations include <code>ArrayList</code> and <code>LinkedList</code>.</p>
+                <pre><code>
+// Example of ArrayList
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Red");
+        list.add("Green");
+        list.add("Blue");
+
+        System.out.println("List: " + list);
+    }
+}
+                </code></pre>
+
+                <h2 id="set">Set Interface</h2>
+                <p>The <code>Set</code> interface represents a collection that does not allow duplicate elements. Common implementations include <code>HashSet</code> and <code>TreeSet</code>.</p>
+                <pre><code>
+// Example of HashSet
+import java.util.HashSet;
+
+public class Main {
+    public static void main(String[] args) {
+        HashSet<Integer> set = new HashSet<>();
+        set.add(10);
+        set.add(20);
+        set.add(20); // Duplicate element
+
+        System.out.println("Set: " + set);
+    }
+}
+                </code></pre>
+
+                <h2 id="map">Map Interface</h2>
+                <p>The <code>Map</code> interface represents a collection of key-value pairs, where keys are unique. Common implementations include <code>HashMap</code> and <code>TreeMap</code>.</p>
+                <pre><code>
+// Example of HashMap
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(1, "One");
+        map.put(2, "Two");
+        map.put(3, "Three");
+
+        System.out.println("Map: " + map);
+    }
+}
+                </code></pre>
+
+                <h2 id="queue">Queue Interface</h2>
+                <p>The <code>Queue</code> interface represents a collection designed for holding elements prior to processing. Common implementations include <code>LinkedList</code> and <code>PriorityQueue</code>.</p>
+                <pre><code>
+// Example of Queue
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Task 1");
+        queue.add("Task 2");
+        queue.add("Task 3");
+
+        System.out.println("Queue: " + queue);
+    }
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='java_exception_handling.html'">Previous</button>
+                    <button onclick="location.href='java_multithreading.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

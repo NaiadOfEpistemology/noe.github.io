@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Oriented Programming - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Core Java Topics</h3>
+            <ul>
+                <li><a href="intro_to_java.html">1. Introduction to Core Java</a></li>
+                <li><a href="java_basics.html">2. Java Basics</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">3. Object-Oriented Programming</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#principles">Principles of OOP</a></li>
+                        <li><a href="#classes-objects">Classes and Objects</a></li>
+                        <li><a href="#inheritance">Inheritance</a></li>
+                        <li><a href="#polymorphism">Polymorphism</a></li>
+                        <li><a href="#abstraction">Abstraction</a></li>
+                        <li><a href="#encapsulation">Encapsulation</a></li>
+                    </ul>
+                </li>
+                <li><a href="java_exception_handling.html">4. Exception Handling</a></li>
+                <li><a href="java_collections.html">5. Collections Framework</a></li>
+                <li><a href="java_multithreading.html">6. Multithreading</a></li>
+                <li><a href="java_file_handling.html">7. File Handling</a></li>
+                <li><a href="java_networking.html">8. Networking</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Object-Oriented Programming</h1>
+
+                <h2 id="principles">Principles of OOP</h2>
+                <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects." Java follows four main principles of OOP:</p>
+                <ul>
+                    <li><strong>Encapsulation:</strong> Grouping related data and methods together to protect them from unauthorized access.</li>
+                    <li><strong>Abstraction:</strong> Hiding implementation details and exposing only the functionality.</li>
+                    <li><strong>Inheritance:</strong> Allowing a class to inherit properties and methods from a parent class.</li>
+                    <li><strong>Polymorphism:</strong> Enabling a single interface to represent different implementations.</li>
+                </ul>
+
+                <h2 id="classes-objects">Classes and Objects</h2>
+                <p>Classes are blueprints for creating objects, and objects are instances of classes. A class contains fields (attributes) and methods (behavior).</p>
+                <pre><code>
+// Example of a class and object
+class Car {
+    String model;
+    int year;
+
+    void displayInfo() {
+        System.out.println("Model: " + model + ", Year: " + year);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car();
+        car1.model = "Toyota";
+        car1.year = 2021;
+        car1.displayInfo();
+    }
+}
+                </code></pre>
+
+                <h2 id="inheritance">Inheritance</h2>
+                <p>Inheritance allows a child class to acquire properties and behaviors of a parent class, promoting code reuse.</p>
+                <pre><code>
+// Example of inheritance
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+    }
+}
+                </code></pre>
+
+                <h2 id="polymorphism">Polymorphism</h2>
+                <p>Polymorphism allows methods to perform different tasks based on the object that invokes them. It can be achieved through method overriding and method overloading.</p>
+                <pre><code>
+// Example of method overriding
+class Animal {
+    void sound() {
+        System.out.println("This animal makes a sound.");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("The cat meows.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Cat();
+        animal.sound();
+    }
+}
+                </code></pre>
+
+                <h2 id="abstraction">Abstraction</h2>
+                <p>Abstraction hides implementation details and shows only the necessary features to the user. It can be achieved using abstract classes and interfaces.</p>
+                <pre><code>
+// Example of abstraction using an abstract class
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a circle.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape shape = new Circle();
+        shape.draw();
+    }
+}
+                </code></pre>
+
+                <h2 id="encapsulation">Encapsulation</h2>
+                <p>Encapsulation is the practice of bundling data and methods that operate on the data within a class. It restricts direct access to data using access modifiers like <code>private</code>.</p>
+                <pre><code>
+// Example of encapsulation
+class Student {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.setName("John");
+        System.out.println("Student Name: " + student.getName());
+    }
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='java_basics.html'">Previous</button>
+                    <button onclick="location.href='java_exception_handling.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

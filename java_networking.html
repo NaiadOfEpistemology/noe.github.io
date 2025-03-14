@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Core Java Topics</h3>
+            <ul>
+                <li><a href="intro_to_java.html">1. Introduction to Core Java</a></li>
+                <li><a href="java_basics.html">2. Java Basics</a></li>
+                <li><a href="java_oop.html">3. Object-Oriented Programming</a></li>
+                <li><a href="java_exception_handling.html">4. Exception Handling</a></li>
+                <li><a href="java_collections.html">5. Collections Framework</a></li>
+                <li><a href="java_multithreading.html">6. Multithreading</a></li>
+                <li><a href="java_file_handling.html">7. File Handling</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">8. Networking</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#networking-intro">Introduction to Networking</a></li>
+                        <li><a href="#socket-programming">Socket Programming</a></li>
+                        <li><a href="#http-url-connection">HTTP and URL Connection</a></li>
+                        <li><a href="#datagrams">Datagrams</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Networking</h1>
+
+                <h2 id="networking-intro">Introduction to Networking</h2>
+                <p>Networking in Java allows programs to communicate over a network, such as the internet or a local area network (LAN). Java provides the <code>java.net</code> package for developing networked applications using TCP/IP protocols.</p>
+
+                <h2 id="socket-programming">Socket Programming</h2>
+                <p>Socket programming is used for communication between programs running on different devices over a network. Java provides the <code>Socket</code> and <code>ServerSocket</code> classes to implement this functionality.</p>
+                <pre><code>
+// Example of Socket and ServerSocket
+import java.io.*;
+import java.net.*;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Server
+            ServerSocket serverSocket = new ServerSocket(5000);
+            System.out.println("Server is running...");
+            Socket socket = serverSocket.accept();
+
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
+
+            String message = input.readLine();
+            System.out.println("Client: " + message);
+            output.println("Hello, Client!");
+
+            socket.close();
+            serverSocket.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+                </code></pre>
+
+                <h2 id="http-url-connection">HTTP and URL Connection</h2>
+                <p>Java provides the <code>HttpURLConnection</code> and <code>URL</code> classes to work with HTTP requests and URLs. These classes are used for tasks like downloading data or accessing REST APIs.</p>
+                <pre><code>
+// Example of URL and HttpURLConnection
+import java.io.*;
+import java.net.*;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("https://www.example.com");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+                </code></pre>
+
+                <h2 id="datagrams">Datagrams</h2>
+                <p>Java provides the <code>DatagramSocket</code> and <code>DatagramPacket</code> classes for UDP (User Datagram Protocol) communication. Unlike TCP, UDP is connectionless and faster but doesn't guarantee delivery.</p>
+                <pre><code>
+// Example of DatagramSocket and DatagramPacket
+import java.net.*;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Sending a datagram
+            DatagramSocket socket = new DatagramSocket();
+            String message = "Hello, UDP!";
+            DatagramPacket packet = new DatagramPacket(message.getBytes(), message.length(), InetAddress.getByName("localhost"), 5000);
+            socket.send(packet);
+
+            // Receiving a datagram
+            byte[] buffer = new byte[1024];
+            DatagramPacket receivedPacket = new DatagramPacket(buffer, buffer.length);
+            socket.receive(receivedPacket);
+            String receivedMessage = new String(receivedPacket.getData(), 0, receivedPacket.getLength());
+            System.out.println("Received: " + receivedMessage);
+
+            socket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='java_file_handling.html'">Previous</button>
+                    <button onclick="location.href='intro_to_java.html'">Home</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

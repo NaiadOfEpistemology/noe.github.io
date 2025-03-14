@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to HTML & CSS - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>HTML & CSS Topics</h3>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">1. Introduction to HTML & CSS</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#what-is-html">What is HTML?</a></li>
+                        <li><a href="#what-is-css">What is CSS?</a></li>
+                        <li><a href="#uses">Uses and Importance</a></li>
+                    </ul>
+                </li>
+                <li><a href="html_basics.html">2. HTML Basics</a></li>
+                <li><a href="css_basics.html">3. CSS Basics</a></li>
+                <li><a href="html_forms.html">4. HTML Forms</a></li>
+                <li><a href="css_layouts.html">5. CSS Layouts</a></li>
+                <li><a href="responsive_design.html">6. Responsive Design</a></li>
+                <li><a href="web_project.html">7. HTML & CSS Project</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Introduction to HTML & CSS</h1>
+
+                <h2 id="what-is-html">What is HTML?</h2>
+                <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It uses tags to define elements such as headings, paragraphs, links, and images.</p>
+                <pre><code>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is my first web page.</p>
+</body>
+</html>
+                </code></pre>
+
+                <h2 id="what-is-css">What is CSS?</h2>
+                <p>CSS (Cascading Style Sheets) is a language used to style and layout HTML elements. With CSS, you can control colors, fonts, spacing, and positioning of elements on a page.</p>
+                <pre><code>
+/* Example CSS */
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: darkblue;
+}
+p {
+    color: black;
+}
+                </code></pre>
+
+                <h2 id="uses">Uses and Importance</h2>
+                <p>HTML and CSS work together to create visually appealing and functional web pages:</p>
+                <ul>
+                    <li><strong>HTML:</strong> Defines the structure and content of the webpage.</li>
+                    <li><strong>CSS:</strong> Enhances the design, layout, and responsiveness of the webpage.</li>
+                    <li>Both are fundamental skills for web developers and designers.</li>
+                </ul>
+
+                <div class="buttons">
+                    <button onclick="location.href='#'">Previous</button>
+                    <button onclick="location.href='html_basics.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

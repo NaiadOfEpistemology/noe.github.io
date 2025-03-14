@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>HTML & CSS Topics</h3>
+            <ul>
+                <li><a href="intro_to_html_css.html">1. Introduction to HTML & CSS</a></li>
+                <li><a href="html_basics.html">2. HTML Basics</a></li>
+                <li><a href="css_basics.html">3. CSS Basics</a></li>
+                <li><a href="html_forms.html">4. HTML Forms</a></li>
+                <li>
+                    <a href="javascript:void(0);">5. CSS Layouts</a>
+                </li>
+                <li><a href="responsive_design.html">6. Responsive Design</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>CSS Layouts</h1>
+
+                <h2>Box Model</h2>
+                <p>The CSS Box Model describes the layout and design of elements. It includes margins, borders, padding, and the actual content.</p>
+                <pre><code>
+/* Example CSS */
+div {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    width: 200px;
+}
+                </code></pre>
+
+                <h2>Positioning</h2>
+                <p>CSS provides different positioning schemes for layout design:</p>
+                <ul>
+                    <li><strong>Static:</strong> Default positioning.</li>
+                    <li><strong>Relative:</strong> Positioned relative to its normal position.</li>
+                    <li><strong>Absolute:</strong> Positioned relative to its nearest positioned ancestor.</li>
+                    <li><strong>Fixed:</strong> Positioned relative to the viewport.</li>
+                </ul>
+                <pre><code>
+/* Example of Positioning */
+div {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+                </code></pre>
+
+                <h2>Flexbox</h2>
+                <p>Flexbox is a powerful layout module used to design flexible and responsive layouts.</p>
+                <pre><code>
+/* Example of Flexbox */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.child {
+    flex: 1;
+    margin: 5px;
+}
+                </code></pre>
+
+                <h2>Grid</h2>
+                <p>The CSS Grid Layout is a two-dimensional layout system that allows you to design web pages easily.</p>
+                <pre><code>
+/* Example of Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.grid-item {
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='html_forms.html'">Previous</button>
+                    <button onclick="location.href='responsive_design.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

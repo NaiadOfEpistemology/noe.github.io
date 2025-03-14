@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Basics - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Core Java Topics</h3>
+            <ul>
+                <li><a href="intro_to_java.html">1. Introduction to Core Java</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">2. Java Basics</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#syntax">Syntax Overview</a></li>
+                        <li><a href="#data-types">Data Types</a></li>
+                        <li><a href="#variables">Variables</a></li>
+                        <li><a href="#operators">Operators</a></li>
+                        <li><a href="#control-flow">Control Flow Statements</a></li>
+                    </ul>
+                </li>
+                <li><a href="java_oop.html">3. Object-Oriented Programming</a></li>
+                <li><a href="java_exception_handling.html">4. Exception Handling</a></li>
+                <li><a href="java_collections.html">5. Collections Framework</a></li>
+                <li><a href="java_multithreading.html">6. Multithreading</a></li>
+                <li><a href="java_file_handling.html">7. File Handling</a></li>
+                <li><a href="java_networking.html">8. Networking</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Java Basics</h1>
+
+                <h2 id="syntax">Syntax Overview</h2>
+                <p>Java syntax forms the basis of how Java code is written and structured. A typical Java program consists of a class definition, methods, and statements. Here's a basic example:</p>
+                <pre><code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); // Output text
+    }
+}
+                </code></pre>
+
+                <h2 id="data-types">Data Types</h2>
+                <p>Java provides several data types to handle different kinds of data:</p>
+                <ul>
+                    <li><strong>Primitive Types:</strong> byte, short, int, long, float, double, char, boolean</li>
+                    <li><strong>Non-Primitive Types:</strong> Strings, Arrays, Classes, Interfaces</li>
+                </ul>
+                <pre><code>
+// Example of data types
+int number = 10;
+float pi = 3.14f;
+boolean isTrue = true;
+char grade = 'A';
+                </code></pre>
+
+                <h2 id="variables">Variables</h2>
+                <p>Variables in Java are containers for storing data. A variable must be declared with a data type before use.</p>
+                <pre><code>
+// Variable declaration and initialization
+int age = 25;
+String name = "Java";
+                </code></pre>
+
+                <h2 id="operators">Operators</h2>
+                <p>Operators are used to perform operations on variables and values. Java provides various operators:</p>
+                <ul>
+                    <li><strong>Arithmetic Operators:</strong> +, -, *, /, %</li>
+                    <li><strong>Relational Operators:</strong> ==, !=, >, <, >=, <=</li>
+                    <li><strong>Logical Operators:</strong> &&, ||, !</li>
+                    <li><strong>Bitwise Operators:</strong> &, |, ^, ~, <<, >></li>
+                    <li><strong>Assignment Operators:</strong> =, +=, -=, *=, /=</li>
+                </ul>
+                <pre><code>
+// Example of operators
+int x = 10, y = 20;
+int sum = x + y;   // Arithmetic
+boolean result = (x < y);   // Relational
+                </code></pre>
+
+                <h2 id="control-flow">Control Flow Statements</h2>
+                <p>Control flow statements dictate the order in which statements are executed. Common control flow statements include:</p>
+                <ul>
+                    <li><strong>if-else:</strong> Executes a block of code based on a condition.</li>
+                    <li><strong>switch:</strong> Selects a block of code to execute based on a value.</li>
+                    <li><strong>for:</strong> Executes a block of code for a set number of iterations.</li>
+                    <li><strong>while/do-while:</strong> Executes a block of code as long as a condition is true.</li>
+                </ul>
+                <pre><code>
+// Example of if-else
+if (x > y) {
+    System.out.println("x is greater");
+} else {
+    System.out.println("y is greater");
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='intro_to_java.html'">Previous</button>
+                    <button onclick="location.href='java_oop.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

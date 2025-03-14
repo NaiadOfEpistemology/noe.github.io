@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Programming - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>JavaScript Topics</h3>
+            <ul>
+                <li><a href="intro_to_javascript.html">1. Introduction to JavaScript</a></li>
+                <li><a href="javascript_basics.html">2. JavaScript Basics</a></li>
+                <li><a href="dom_manipulation.html">3. DOM Manipulation</a></li>
+                <li><a href="events.html">4. JavaScript Events</a></li>
+                <li>
+                    <a href="javascript:void(0);">5. Asynchronous Programming</a>
+                </li>
+                <li><a href="javascript_project.html">6. JavaScript Project</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Asynchronous Programming</h1>
+
+                <h2>What is Asynchronous Programming?</h2>
+                <p>Asynchronous programming allows JavaScript to perform non-blocking operations, meaning it can continue executing code while waiting for time-consuming tasks (e.g., API calls or file downloads) to complete.</p>
+
+                <h2>Callbacks</h2>
+                <p>A callback is a function passed as an argument to another function, executed after an asynchronous task is completed.</p>
+                <pre><code>
+// Example of a Callback
+function fetchData(callback) {
+    setTimeout(() => {
+        callback("Data fetched!");
+    }, 1000);
+}
+
+fetchData((message) => {
+    console.log(message);
+});
+                </code></pre>
+
+                <h2>Promises</h2>
+                <p>Promises are objects that represent the eventual completion (or failure) of an asynchronous operation. They have three states: <code>pending</code>, <code>fulfilled</code>, and <code>rejected</code>.</p>
+                <pre><code>
+// Example of a Promise
+const promise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve("Promise resolved!");
+    } else {
+        reject("Promise rejected!");
+    }
+});
+
+promise
+    .then((message) => {
+        console.log(message);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+                </code></pre>
+
+                <h2>Async/Await</h2>
+                <p>The <code>async</code> and <code>await</code> keywords simplify working with Promises, making asynchronous code look synchronous and easier to read.</p>
+                <pre><code>
+// Example of Async/Await
+async function fetchData() {
+    try {
+        const response = await new Promise((resolve, reject) => {
+            setTimeout(() => resolve("Data fetched!"), 1000);
+        });
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+fetchData();
+                </code></pre>
+
+                <h2>Using Fetch API</h2>
+                <p>The Fetch API is a modern way to make HTTP requests, replacing the older <code>XMLHttpRequest</code>.</p>
+                <pre><code>
+// Example of Fetch API
+fetch("https://api.example.com/data")
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error("Error:", error));
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='events.html'">Previous</button>
+                    <button onclick="location.href='javascript_project.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

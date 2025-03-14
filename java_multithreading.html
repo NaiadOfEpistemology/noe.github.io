@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multithreading - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Core Java Topics</h3>
+            <ul>
+                <li><a href="intro_to_java.html">1. Introduction to Core Java</a></li>
+                <li><a href="java_basics.html">2. Java Basics</a></li>
+                <li><a href="java_oop.html">3. Object-Oriented Programming</a></li>
+                <li><a href="java_exception_handling.html">4. Exception Handling</a></li>
+                <li><a href="java_collections.html">5. Collections Framework</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">6. Multithreading</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#what-is-threading">What is Multithreading?</a></li>
+                        <li><a href="#thread-class">Using the Thread Class</a></li>
+                        <li><a href="#runnable-interface">Using the Runnable Interface</a></li>
+                        <li><a href="#thread-methods">Thread Methods</a></li>
+                        <li><a href="#thread-synchronization">Thread Synchronization</a></li>
+                        <li><a href="#inter-thread-comm">Inter-Thread Communication</a></li>
+                    </ul>
+                </li>
+                <li><a href="java_file_handling.html">7. File Handling</a></li>
+                <li><a href="java_networking.html">8. Networking</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Multithreading</h1>
+
+                <h2 id="what-is-threading">What is Multithreading?</h2>
+                <p>Multithreading is a process of executing multiple threads simultaneously to perform different tasks within a single program. Threads are lightweight sub-processes that share the same memory space and enable concurrent execution, improving performance in programs with multiple tasks.</p>
+
+                <h2 id="thread-class">Using the Thread Class</h2>
+                <p>You can create a thread in Java by extending the <code>Thread</code> class and overriding its <code>run()</code> method.</p>
+                <pre><code>
+// Example of extending Thread class
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread thread = new MyThread();
+        thread.start();
+    }
+}
+                </code></pre>
+
+                <h2 id="runnable-interface">Using the Runnable Interface</h2>
+                <p>An alternative way to create a thread is by implementing the <code>Runnable</code> interface and passing the object to the <code>Thread</code> class constructor.</p>
+                <pre><code>
+// Example of implementing Runnable interface
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyRunnable runnable = new MyRunnable();
+        Thread thread = new Thread(runnable);
+        thread.start();
+    }
+}
+                </code></pre>
+
+                <h2 id="thread-methods">Thread Methods</h2>
+                <p>Java provides several methods to work with threads:</p>
+                <ul>
+                    <li><code>start()</code>: Starts the execution of the thread.</li>
+                    <li><code>run()</code>: Contains the code that a thread executes.</li>
+                    <li><code>sleep()</code>: Pauses the thread for a specified time (in milliseconds).</li>
+                    <li><code>join()</code>: Waits for a thread to finish execution.</li>
+                    <li><code>getName()</code> and <code>setName()</code>: Gets/sets the name of a thread.</li>
+                </ul>
+                <pre><code>
+// Example of using thread methods
+class MyThread extends Thread {
+    public void run() {
+        try {
+            Thread.sleep(500);
+            System.out.println("Thread " + Thread.currentThread().getName() + " is running.");
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread thread1 = new MyThread();
+        MyThread thread2 = new MyThread();
+        thread1.setName("Thread-1");
+        thread2.setName("Thread-2");
+
+        thread1.start();
+        thread2.start();
+    }
+}
+                </code></pre>
+
+                <h2 id="thread-synchronization">Thread Synchronization</h2>
+                <p>Thread synchronization ensures that multiple threads do not access shared resources simultaneously, preventing inconsistencies. The <code>synchronized</code> keyword is used for thread synchronization.</p>
+                <pre><code>
+// Example of synchronized block
+class SharedResource {
+    void printNumbers(int n) {
+        synchronized (this) {
+            for (int i = 1; i <= 5; i++) {
+                System.out.println(n * i);
+                try {
+                    Thread.sleep(400);
+                } catch (InterruptedException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+    }
+}
+
+class MyThread extends Thread {
+    SharedResource sr;
+
+    MyThread(SharedResource sr) {
+        this.sr = sr;
+    }
+
+    public void run() {
+        sr.printNumbers(5);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SharedResource sr = new SharedResource();
+
+        MyThread thread1 = new MyThread(sr);
+        MyThread thread2 = new MyThread(sr);
+
+        thread1.start();
+        thread2.start();
+    }
+}
+                </code></pre>
+
+                <h2 id="inter-thread-comm">Inter-Thread Communication</h2>
+                <p>Java provides methods like <code>wait()</code>, <code>notify()</code>, and <code>notifyAll()</code> to allow threads to communicate with each other.</p>
+                <pre><code>
+// Example of inter-thread communication
+class SharedResource {
+    boolean flag = false;
+
+    synchronized void produce() {
+        if (flag) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println("Producing...");
+        flag = true;
+        notify();
+    }
+
+    synchronized void consume() {
+        if (!flag) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println("Consuming...");
+        flag = false;
+        notify();
+    }
+}
+
+class Producer extends Thread {
+    SharedResource sr;
+
+    Producer(SharedResource sr) {
+        this.sr = sr;
+    }
+
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            sr.produce();
+        }
+    }
+}
+
+class Consumer extends Thread {
+    SharedResource sr;
+
+    Consumer(SharedResource sr) {
+        this.sr = sr;
+    }
+
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            sr.consume();
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SharedResource sr = new SharedResource();
+
+        Producer producer = new Producer(sr);
+        Consumer consumer = new Consumer(sr);
+
+        producer.start();
+        consumer.start();
+    }
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='java_collections.html'">Previous</button>
+                    <button onclick="location.href='java_file_handling.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

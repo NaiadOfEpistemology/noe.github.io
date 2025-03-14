@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>HTML & CSS Topics</h3>
+            <ul>
+                <li><a href="intro_to_html_css.html">1. Introduction to HTML & CSS</a></li>
+                <li><a href="html_basics.html">2. HTML Basics</a></li>
+                <li>
+                    <a href="javascript:void(0);">3. CSS Basics</a>
+                </li>
+                <li><a href="html_forms.html">4. HTML Forms</a></li>
+                <li><a href="css_layouts.html">5. CSS Layouts</a></li>
+                <li><a href="responsive_design.html">6. Responsive Design</a></li>
+                <li><a href="web_project.html">7. HTML & CSS Project</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>CSS Basics</h1>
+
+                <h2>What is CSS?</h2>
+                <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are displayed on the screen, paper, or other media.</p>
+
+                <h2>CSS Selectors</h2>
+                <p>Selectors define which HTML elements the styles will apply to.</p>
+                <pre><code>
+/* Example CSS */
+p {
+    color: blue;
+}
+#unique {
+    font-size: 20px;
+}
+.classname {
+    background-color: yellow;
+}
+                </code></pre>
+
+                <h2>Adding CSS</h2>
+                <p>CSS can be added in three ways:</p>
+                <ul>
+                    <li><strong>Inline:</strong> Inside the HTML element using the <code>style</code> attribute.</li>
+                    <li><strong>Internal:</strong> Inside a <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code>.</li>
+                    <li><strong>External:</strong> In a separate file linked using <code>&lt;link&gt;</code>.</li>
+                </ul>
+                <pre><code>
+<!-- Example of linking an external CSS -->
+<link rel="stylesheet" href="styles.css">
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='html_basics.html'">Previous</button>
+                    <button onclick="location.href='html_forms.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

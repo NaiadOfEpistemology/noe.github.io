@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>JavaScript Topics</h3>
+            <ul>
+                <li><a href="intro_to_javascript.html">1. Introduction to JavaScript</a></li>
+                <li>
+                    <a href="javascript:void(0);">2. JavaScript Basics</a>
+                </li>
+                <li><a href="dom_manipulation.html">3. DOM Manipulation</a></li>
+                <li><a href="events.html">4. JavaScript Events</a></li>
+                <li><a href="async_programming.html">5. Asynchronous Programming</a></li>
+                <li><a href="javascript_project.html">6. JavaScript Project</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>JavaScript Basics</h1>
+
+                <h2>Variables</h2>
+                <p>JavaScript supports three types of variables:</p>
+                <ul>
+                    <li><code>var</code>: Function-scoped, hoisted.</li>
+                    <li><code>let</code>: Block-scoped, preferred for most use cases.</li>
+                    <li><code>const</code>: Block-scoped, immutable (cannot be reassigned).</li>
+                </ul>
+                <pre><code>
+// Example
+let name = "John";
+const age = 25;
+console.log(name, age);
+                </code></pre>
+
+                <h2>Data Types</h2>
+                <p>JavaScript has dynamic typing, with these main data types:</p>
+                <ul>
+                    <li><strong>Primitive:</strong> number, string, boolean, null, undefined.</li>
+                    <li><strong>Object:</strong> arrays, functions, objects.</li>
+                </ul>
+
+                <h2>Operators</h2>
+                <p>JavaScript supports arithmetic, comparison, logical, and assignment operators.</p>
+                <pre><code>
+// Example
+let result = 5 + 10; // Arithmetic
+if (result > 10) {   // Comparison
+    console.log(true && false); // Logical
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='intro_to_javascript.html'">Previous</button>
+                    <button onclick="location.href='dom_manipulation.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

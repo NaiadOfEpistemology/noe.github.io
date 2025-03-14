@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>HTML & CSS Topics</h3>
+            <ul>
+                <li><a href="intro_to_html_css.html">1. Introduction to HTML & CSS</a></li>
+                <li><a href="html_basics.html">2. HTML Basics</a></li>
+                <li><a href="css_basics.html">3. CSS Basics</a></li>
+                <li><a href="html_forms.html">4. HTML Forms</a></li>
+                <li><a href="css_layouts.html">5. CSS Layouts</a></li>
+                <li>
+                    <a href="javascript:void(0);">6. Responsive Design</a>
+                </li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Responsive Design</h1>
+
+                <h2>What is Responsive Design?</h2>
+                <p>Responsive design ensures web pages adapt to different screen sizes and devices, offering a consistent user experience on desktops, tablets, and mobile phones.</p>
+
+                <h2>Viewport Meta Tag</h2>
+                <p>The <code>viewport</code> meta tag is crucial for responsive design, as it controls how content is scaled on mobile devices.</p>
+                <pre><code>
+<!-- Example Viewport Tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </code></pre>
+
+                <h2>CSS Media Queries</h2>
+                <p>Media queries allow you to apply different styles depending on the screen size or device. They are used for creating responsive layouts.</p>
+                <pre><code>
+/* Example Media Query */
+@media (max-width: 768px) {
+    body {
+        background-color: lightgrey;
+    }
+}
+                </code></pre>
+
+                <h2>Flexible Grids</h2>
+                <p>Using flexible grids with percentage-based widths ensures that layouts resize dynamically with the screen size.</p>
+                <pre><code>
+/* Example Flexible Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+                </code></pre>
+
+                <h2>Responsive Images</h2>
+                <p>Make images responsive by using the <code>max-width</code> property and relative units like percentages.</p>
+                <pre><code>
+/* Example Responsive Image */
+img {
+    max-width: 100%;
+    height: auto;
+}
+                </code></pre>
+
+                <h2>Flexbox and Grid for Responsive Design</h2>
+                <p>Flexbox and Grid are powerful tools for designing responsive layouts. They can adapt content alignment and spacing based on the available space.</p>
+                <pre><code>
+/* Example Responsive Flexbox */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.flex-item {
+    flex: 1 1 200px;
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='css_layouts.html'">Previous</button>
+                    <button onclick="location.href='intro_to_html_css.html'">Home</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

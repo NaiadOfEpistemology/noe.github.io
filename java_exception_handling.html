@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSubMenu() {
+            var subMenu = document.getElementById("sub-menu");
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Core Java Topics</h3>
+            <ul>
+                <li><a href="intro_to_java.html">1. Introduction to Core Java</a></li>
+                <li><a href="java_basics.html">2. Java Basics</a></li>
+                <li><a href="java_oop.html">3. Object-Oriented Programming</a></li>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu()">4. Exception Handling</a>
+                    <ul id="sub-menu" style="display:none; list-style-type:circle; margin-left: 20px;">
+                        <li><a href="#what-is-exception">What is an Exception?</a></li>
+                        <li><a href="#types-exceptions">Types of Exceptions</a></li>
+                        <li><a href="#try-catch">try-catch Block</a></li>
+                        <li><a href="#finally">finally Block</a></li>
+                        <li><a href="#throw">throw Keyword</a></li>
+                        <li><a href="#throws">throws Keyword</a></li>
+                    </ul>
+                </li>
+                <li><a href="java_collections.html">5. Collections Framework</a></li>
+                <li><a href="java_multithreading.html">6. Multithreading</a></li>
+                <li><a href="java_file_handling.html">7. File Handling</a></li>
+                <li><a href="java_networking.html">8. Networking</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>Exception Handling</h1>
+
+                <h2 id="what-is-exception">What is an Exception?</h2>
+                <p>An exception is an event that occurs during the execution of a program and disrupts its normal flow. Exceptions in Java are objects that represent an error or an unexpected event, and they are thrown when the program encounters a problem.</p>
+
+                <h2 id="types-exceptions">Types of Exceptions</h2>
+                <p>Java exceptions are classified into two main categories:</p>
+                <ul>
+                    <li><strong>Checked Exceptions:</strong> These are checked at compile-time, and the program must handle them explicitly (e.g., <code>IOException</code>, <code>SQLException</code>).</li>
+                    <li><strong>Unchecked Exceptions:</strong> These are not checked at compile-time and occur due to programming errors (e.g., <code>ArithmeticException</code>, <code>NullPointerException</code>).</li>
+                </ul>
+
+                <h2 id="try-catch">try-catch Block</h2>
+                <p>The <code>try</code> block contains code that may throw an exception, and the <code>catch</code> block handles the exception.</p>
+                <pre><code>
+// Example of try-catch
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0; // This will throw ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+}
+                </code></pre>
+
+                <h2 id="finally">finally Block</h2>
+                <p>The <code>finally</code> block always executes, regardless of whether an exception occurs or not. It is typically used to release resources like files or database connections.</p>
+                <pre><code>
+// Example of finally block
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int[] numbers = {1, 2, 3};
+            System.out.println(numbers[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block executed.");
+        }
+    }
+}
+                </code></pre>
+
+                <h2 id="throw">throw Keyword</h2>
+                <p>The <code>throw</code> keyword is used to explicitly throw an exception.</p>
+                <pre><code>
+// Example of throw keyword
+public class Main {
+    public static void main(String[] args) {
+        throw new ArithmeticException("Division by zero is not allowed.");
+    }
+}
+                </code></pre>
+
+                <h2 id="throws">throws Keyword</h2>
+                <p>The <code>throws</code> keyword indicates that a method can throw exceptions and delegates the responsibility of handling them to the caller.</p>
+                <pre><code>
+// Example of throws keyword
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FileReader file = new FileReader("nonexistent.txt");
+    }
+}
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='java_oop.html'">Previous</button>
+                    <button onclick="location.href='java_collections.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

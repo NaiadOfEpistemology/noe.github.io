@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>HTML & CSS Topics</h3>
+            <ul>
+                <li><a href="intro_to_html_css.html">1. Introduction to HTML & CSS</a></li>
+                <li><a href="html_basics.html">2. HTML Basics</a></li>
+                <li><a href="css_basics.html">3. CSS Basics</a></li>
+                <li>
+                    <a href="javascript:void(0);">4. HTML Forms</a>
+                </li>
+                <li><a href="css_layouts.html">5. CSS Layouts</a></li>
+                <li><a href="responsive_design.html">6. Responsive Design</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>HTML Forms</h1>
+
+                <h2>What are HTML Forms?</h2>
+                <p>HTML forms are used to collect user input. The data is sent to a server for processing using form elements like input fields, checkboxes, radio buttons, and submit buttons.</p>
+
+                <h2>Form Structure</h2>
+                <p>An HTML form is defined using the <code>&lt;form&gt;</code> tag.</p>
+                <pre><code>
+<!-- Example HTML Form -->
+<form action="/submit-form" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+    
+    <button type="submit">Submit</button>
+</form>
+                </code></pre>
+
+                <h2>Common Input Types</h2>
+                <ul>
+                    <li><strong>Text:</strong> <code>&lt;input type="text"&gt;</code></li>
+                    <li><strong>Email:</strong> <code>&lt;input type="email"&gt;</code></li>
+                    <li><strong>Checkbox:</strong> <code>&lt;input type="checkbox"&gt;</code></li>
+                    <li><strong>Radio:</strong> <code>&lt;input type="radio"&gt;</code></li>
+                    <li><strong>Submit:</strong> <code>&lt;input type="submit"&gt;</code></li>
+                </ul>
+
+                <h2>Dropdowns and Textareas</h2>
+                <p>You can add dropdowns using the <code>&lt;select&gt;</code> tag and multiline input using the <code>&lt;textarea&gt;</code> tag.</p>
+                <pre><code>
+<!-- Example of Dropdown and Textarea -->
+<select>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+</select>
+
+<textarea rows="4" cols="50">Enter your message...</textarea>
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='css_basics.html'">Previous</button>
+                    <button onclick="location.href='css_layouts.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>

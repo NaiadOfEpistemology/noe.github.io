@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation - Learning Repository</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>JavaScript Topics</h3>
+            <ul>
+                <li><a href="intro_to_javascript.html">1. Introduction to JavaScript</a></li>
+                <li><a href="javascript_basics.html">2. JavaScript Basics</a></li>
+                <li>
+                    <a href="javascript:void(0);">3. DOM Manipulation</a>
+                </li>
+                <li><a href="events.html">4. JavaScript Events</a></li>
+                <li><a href="async_programming.html">5. Asynchronous Programming</a></li>
+                <li><a href="javascript_project.html">6. JavaScript Project</a></li>
+            </ul>
+        </div>
+        <section id="content" class="content-section">
+            <div class="content-container">
+                <h1>DOM Manipulation</h1>
+
+                <h2>What is the DOM?</h2>
+                <p>The Document Object Model (DOM) is a programming interface that represents an HTML document as a tree structure. Each element in the HTML document becomes a node in the DOM tree, allowing JavaScript to dynamically manipulate the content, structure, and style of a web page.</p>
+
+                <h2>Accessing Elements</h2>
+                <p>You can use various JavaScript methods to access elements in the DOM:</p>
+                <ul>
+                    <li><code>document.getElementById()</code> - Selects an element by its ID.</li>
+                    <li><code>document.getElementsByClassName()</code> - Selects all elements with a specific class.</li>
+                    <li><code>document.getElementsByTagName()</code> - Selects elements by their tag name.</li>
+                    <li><code>document.querySelector()</code> - Selects the first matching element using a CSS selector.</li>
+                    <li><code>document.querySelectorAll()</code> - Selects all matching elements using a CSS selector.</li>
+                </ul>
+                <pre><code>
+// Example
+const element = document.getElementById("myElement");
+console.log(element.textContent);
+                </code></pre>
+
+                <h2>Modifying Elements</h2>
+                <p>Once you've selected an element, you can modify its content, attributes, or styles:</p>
+                <pre><code>
+// Modifying content
+element.textContent = "Hello, World!";
+
+// Changing attributes
+element.setAttribute("class", "newClass");
+
+// Updating styles
+element.style.color = "blue";
+element.style.fontSize = "20px";
+                </code></pre>
+
+                <h2>Creating and Removing Elements</h2>
+                <p>You can dynamically add or remove elements in the DOM:</p>
+                <pre><code>
+// Creating elements
+const newElement = document.createElement("p");
+newElement.textContent = "This is a new paragraph.";
+document.body.appendChild(newElement);
+
+// Removing elements
+const oldElement = document.getElementById("myElement");
+oldElement.remove();
+                </code></pre>
+
+                <h2>DOM Traversal</h2>
+                <p>DOM traversal allows you to navigate through the DOM tree using properties like:</p>
+                <ul>
+                    <li><code>parentNode</code> - Access the parent of an element.</li>
+                    <li><code>childNodes</code> - Access the children of an element.</li>
+                    <li><code>nextSibling</code> - Access the next sibling of an element.</li>
+                    <li><code>previousSibling</code> - Access the previous sibling of an element.</li>
+                </ul>
+                <pre><code>
+// Example of DOM Traversal
+const parent = element.parentNode;
+const children = element.childNodes;
+const next = element.nextSibling;
+                </code></pre>
+
+                <div class="buttons">
+                    <button onclick="location.href='javascript_basics.html'">Previous</button>
+                    <button onclick="location.href='events.html'">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SkillStash - Learning Repository.</p>
+    </footer>
+</body>
+</html>
