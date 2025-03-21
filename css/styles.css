@@ -14,42 +14,11 @@ body, h1, h2, p {
     font-family: Arial, sans-serif;
 }
 
-.dark-mode {
-  background-color: #1e1e1e;
-  color: white;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-body.dark-mode a {
-  color: #bb86fc;
-}
-
-body.dark-mode .sidebar {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode .content-section {
-  background-color: #222;
-}
-
-body.dark-mode button {
-  background-color: #444;
-  color: white;
-  border: 1px solid #888;
-}
-
 body {
     line-height: 1.6;
 }
-
-/* Hero Section */
 .hero {
     height: 100vh;
-    /*background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;*/
     color: white;
     display: flex;
     justify-content: center;
@@ -82,8 +51,6 @@ body {
     margin-top: 20px;
     display: inline-block;
 }
-
-/* Features Section */
 .features {
     display: flex;
     justify-content: space-around;
@@ -104,8 +71,6 @@ body {
 .feature p {
     font-size: 18px;
 }
-
-/* Courses Section */
 .courses {
     text-align: center;
     padding: 50px 20px;
@@ -140,8 +105,6 @@ body {
     border-radius: 5px;
     text-decoration: none;
 }
-
-/* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
@@ -201,7 +164,7 @@ footer {
 .footer-social a img {
     width: 30px;
     height: 30px;
-    filter: invert(100%); /* Makes the icons white */
+    filter: invert(100%);
 }
 
 .footer-bottom {
@@ -214,8 +177,6 @@ footer {
 .footer-bottom p {
     font-size: 0.8rem;
 }
-
-/* CSS in styles.css */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -317,7 +278,7 @@ h1, h2, h3 {
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%; /* Adjust this based on the number of images */
+    width: 300%;
 }
 
 .carousel-images img {
@@ -345,12 +306,12 @@ h1, h2, h3 {
 .carousel-images {
     display: flex;
     width: 300%; 
-    transition: transform 0.5s ease-in-out; /* Smooth scrolling transition */
+    transition: transform 0.5s ease-in-out;
 }
 
 
 .carousel-images img {
-    width: 100%; /* Ensure the images take full width */
+    width: 100%;
     height: auto;
 }
 
@@ -378,7 +339,6 @@ h1, h2, h3 {
   .enroll-btn:hover {
     background-color: #33c6e8;
   }
-  /* Testimonials Section */
 #testimonials {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -416,7 +376,6 @@ h1, h2, h3 {
     font-size: 1.2em;
     color: #33c6e8;
 }
-/* Explore Courses Button */
 .explore-btn-container {
     text-align: center;
     margin: 50px 0;
@@ -530,7 +489,6 @@ h1, h2, h3 {
   .submit-btn:hover {
     background-color: #005f8b;
   }
-  /* Enroll Form Section */
 #enroll-form {
     background-color: #f9f9f9;
     padding: 40px;
@@ -588,7 +546,6 @@ h1, h2, h3 {
   #enroll-form button:hover {
     background-color: #33c6e8;
   }
-   /* Testimonials Section */
 #testimonials {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -647,8 +604,6 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
-
-/* Courses Menu Styling */
 #courses-menu {
     padding: 40px 0;
     text-align: center;

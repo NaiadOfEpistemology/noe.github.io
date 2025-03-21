@@ -4,20 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find Your Perfect Course</title>
-  <link rel="stylesheet" href="css/styles.css"> <!-- Link to the main stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <h1>Find Your Perfect Course</h1>
     <p>Answer the questions below to get personalized course recommendations.</p>
   </header>
-
-  <!-- Course Selector Quiz -->
   <section id="course-quiz">
     <form id="quiz-form">
-      <!-- Question 1 -->
       <div class="quiz-question">
         <label for="goal">What is your main learning goal?</label>
         <select id="goal" name="goal" required>
@@ -27,8 +22,6 @@
           <option value="learn-basics">Learn the Basics of a New Skill</option>
         </select>
       </div>
-
-      <!-- Question 2 -->
       <div class="quiz-question">
         <label for="experience">How much experience do you have?</label>
         <select id="experience" name="experience" required>
@@ -38,8 +31,6 @@
           <option value="advanced">Advanced</option>
         </select>
       </div>
-
-      <!-- Question 3 -->
       <div class="quiz-question">
         <label for="interest">What interests you the most?</label>
         <select id="interest" name="interest" required>
@@ -51,19 +42,15 @@
           <option value="app-development">Mobile App Development</option>
         </select>
       </div>
-
-      <!-- Submit Button -->
       <button type="submit" id="submit-btn">Get Course Recommendation</button>
     </form>
   </section>
-
-  <!-- Recommended Course Result -->
   <section id="course-result" style="display: none;">
     <h2>Your Recommended Course</h2>
     <p id="result-text"></p>
     <a href="#" id="course-link" class="enroll-btn">Learn More</a>
   </section>
 
-  <script src="quiz.js"></script> <!-- JavaScript to handle quiz logic -->
+  <script src="quiz.js"></script>
 </body>
 </html>
