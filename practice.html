@@ -3,119 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Quiz - SkillStash</title>
+    <title>Practice Tests</title>
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .correct { color: green; font-weight: bold; }
-        .wrong { color: red; font-weight: bold; }
-        .question { margin-bottom: 20px; }
-        .score-container { margin-top: 20px; font-size: 18px; font-weight: bold; }
-    </style>
 </head>
 <body>
-
     <header>
-       <div class="container">
-            <div class="header-right">
-                <h1>SkillStash - Practice Questions</h1> 
-            </div>
+        <div class="header-right">
+            <h1>SkillStash Practice</h1>
         </div>
     </header>
 
-    <section id="quiz-section">
-        <h2 id="quiz-title">Loading...</h2>
-        <div id="quiz-container">
-            <p>Loading questions...</p>
+    <section id="practice-menu">
+        <h2>Test Your Knowledge</h2>
+        <p>Select a language to take the practice test. Each test contains 50 MCQs.</p>
+        <div class="menu-container">
+            <div class="category">
+                <h3>Web Development</h3>
+                <ul>
+                    <li><a href="practice_html_css.html">HTML & CSS</a></li>
+                    <li><a href="practice_javascript.html">JavaScript</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Backend</h3>
+                <ul>
+                    <li><a href="practice_python.html">Python</a></li>
+                    <li><a href="practice_java.html">Java</a></li>
+                    <li><a href="practice_c.html">C</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Version Control</h3>
+                <ul>
+                    <li><a href="practice_git.html">Git</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Cybersecurity</h3>
+                <ul>
+                    <li><a href="practice_network_security.html">Network Security</a></li>
+                    <li><a href="practice_ethical_hacking.html">Ethical Hacking</a></li>
+                </ul>
+            </div>
         </div>
-        <button id="submit-btn">Submit Answers</button>
-        <div id="score-container" class="score-container"></div>
     </section>
 
     <footer>
-        <p>&copy; SkillStash - Learning Repository.</p>
+        <div class="footer-bottom">
+            <p>&copy; SkillStash - Learning Repository.</p>
+        </div>
     </footer>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang') || 'general';
-        const quizTitle = document.getElementById("quiz-title");
-        const quizContainer = document.getElementById("quiz-container");
-        const scoreContainer = document.getElementById("score-container");
-
-        // Question bank
-        const questions = {
-            python: [
-                { q: "What is the output of print(2 ** 3)?", options: ["6", "8", "9", "12"], answer: "8" },
-                { q: "Which keyword is used to define a function?", options: ["def", "func", "define", "lambda"], answer: "def" }
-            ],
-            java: [
-                { q: "Which keyword is used for inheritance?", options: ["extends", "inherits", "super", "implements"], answer: "extends" },
-                { q: "What is the default value of an int variable?", options: ["0", "null", "undefined", "1"], answer: "0" }
-            ],
-            c: [
-                { q: "Which symbol is used to terminate a statement in C?", options: [";", ":", ".", ","], answer: ";" },
-                { q: "What is sizeof(int) in most compilers?", options: ["2", "4", "8", "16"], answer: "4" }
-            ],
-            html: [
-                { q: "Which tag is used to create a hyperlink?", options: ["<link>", "<a>", "<href>", "<url>"], answer: "<a>" },
-                { q: "What does HTML stand for?", options: ["Hyper Transfer Markup Language", "Hyper Text Markup Language", "High Tech Machine Learning", "Hyperlink and Text Markup Language"], answer: "Hyper Text Markup Language" }
-            ],
-            javascript: [
-                { q: "Which keyword is used to declare a variable?", options: ["var", "let", "const", "All of the above"], answer: "All of the above" },
-                { q: "What is the correct way to write a comment in JavaScript?", options: ["// comment", "<!-- comment -->", "/* comment */", "# comment"], answer: "// comment" }
-            ]
-        };
-
-        function loadQuiz() {
-            quizTitle.innerText = `Practice Questions: ${lang.toUpperCase()}`;
-            const langQuestions = questions[lang] || [];
-            
-            if (langQuestions.length === 0) {
-                quizContainer.innerHTML = "<p>No questions available for this language yet.</p>";
-                return;
-            }
-
-            quizContainer.innerHTML = langQuestions.map((q, index) => `
-                <div class="question" id="q${index}">
-                    <p><strong>${index + 1}. ${q.q}</strong></p>
-                    ${q.options.map(option => `
-                        <label>
-                            <input type="radio" name="q${index}" value="${option}">
-                            ${option}
-                        </label>
-                    `).join('<br>')}
-                </div>
-            `).join('');
-
-            document.getElementById("submit-btn").style.display = "block";
-        }
-
-        function checkAnswers() {
-            let score = 0;
-            const langQuestions = questions[lang] || [];
-
-            langQuestions.forEach((q, index) => {
-                const selectedOption = document.querySelector(`input[name="q${index}"]:checked`);
-                const questionDiv = document.getElementById(`q${index}`);
-
-                if (selectedOption) {
-                    if (selectedOption.value === q.answer) {
-                        score++;
-                        questionDiv.innerHTML += `<p class="correct">✅ Correct Answer!</p>`;
-                    } else {
-                        questionDiv.innerHTML += `<p class="wrong">❌ Wrong! Correct Answer: ${q.answer}</p>`;
-                    }
-                } else {
-                    questionDiv.innerHTML += `<p class="wrong">⚠️ No answer selected. Correct Answer: ${q.answer}</p>`;
-                }
-            });
-
-            scoreContainer.innerHTML = `You scored <strong>${score} / ${langQuestions.length}</strong>`;
-        }
-
-        document.getElementById("submit-btn").addEventListener("click", checkAnswers);
-        window.onload = loadQuiz;
-    </script>
-
 </body>
 </html>
