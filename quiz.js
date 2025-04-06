@@ -16,13 +16,13 @@ document.getElementById("quiz-form").addEventListener("submit", function (event)
       courseLink = "course-data-science.html";
     } else if (interest === "digital-marketing") {
       recommendedCourse = "Digital Marketing Course";
-      courseLink = "course-digital-marketing.html";
+      courseLink = "course-digitalmarketing.html";
     } else if (interest === "cybersecurity") {
       recommendedCourse = "Cybersecurity Fundamentals";
       courseLink = "course-cybersecurity.html";
     } else if (interest === "app-development") {
       recommendedCourse = "Mobile App Development";
-      courseLink = "course-mobile-app-development.html";
+      courseLink = "course-mobileappdevelopment.html";
     }
   
     
