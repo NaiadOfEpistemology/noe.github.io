@@ -268,60 +268,7 @@ h1, h2, h3 {
         padding: 8px 16px;
     }
 }
-.carousel {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
 
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%;
-}
-
-.carousel-images img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-nav .prev, .carousel-nav .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.carousel-nav .prev {
-    left: 10px;
-}
-
-.carousel-nav .next {
-    right: 10px;
-}
-.carousel-images {
-    display: flex;
-    width: 300%; 
-    transition: transform 0.5s ease-in-out;
-}
-
-
-.carousel-images img {
-    width: 100%;
-    height: auto;
-}
-
-.course-container {
-    margin: 50px auto;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
   
   .course-container h2 {
     font-size: 24px;
